@@ -1,0 +1,39 @@
+// $base__bg: #fff url(http://griddle.it/820-10-0) repeat-y center top;
+//$base__bg: url(../images/body-bg.jpg);
+//$base__bg-alpha: url(../images/body-bg.jpg);
+
+// Typography
+$base__font-size: 10px;
+//! 10px = 1rem
+$base__line-height: 1.2;
+$base__font-color: #222;
+$base__font-family: Arial, Helvetica, sans-serif;
+$base__font-weight: 400;
+$fallback__font: $base__font-family;
+$base__selection-bg: #b3d4fc;
+$base__selection-text-shadow: none;
+
+// Links (lvhfa)
+$link__color: #4a9aea;
+$link__color--hover: #06e;
+
+// Grid
+$minw: 1280px !default;
+$maxw: 100%;
+$maxw-alpha: 1440px !default;
+
+// Responsive
+$MQs: true;
+$screen-alpha: "(max-width: #{$minw})";
+$screen-beta: "(min-width: #{$maxw-alpha})";
+
+// Support
+$include-html-classes: true;
+$include-print-styles: false;
+
+// Compatibility
+$legacy_browser_support: false !default;
+$legacy-support-for-ie7: false !default;
+$legacy-support-for-ie8: false !default;
+$legacy-support-for-ie9: true !default;
+// $experimental-support-for-svg: true !default;

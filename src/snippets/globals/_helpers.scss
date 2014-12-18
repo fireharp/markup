@@ -1,0 +1,63 @@
+%font--alpha {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: "HelveticaNeueCyr Bold", $fallback__font;
+}
+%font--beta {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: "HelveticaNeueCyr Regular", $fallback__font;
+}
+
+.cf {
+  &::after, &::before {
+    display: table;
+    content: "";
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+%tdu {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%tduhn {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+%tdn {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+%tdnhu {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%mlp {
+  margin:     0;
+  padding:    0;
+  list-style: none;
+}
+
+%pseudoBeforeAfter {
+  position: absolute;
+  top:      0;
+  left:     0;
+  z-index:  2;
+  display:  block;
+  content:  "";
+}

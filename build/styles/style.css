@@ -1,0 +1,687 @@
+/*------------------------------------*\
+  $GLOBAL STYLES
+\*------------------------------------*/
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+/* line 12, ../../src/snippets/globals/_global.scss */
+html {
+  color: #222;
+  font-weight: 400;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+/* line 20, ../../src/snippets/globals/_global.scss */
+body {
+  background-color: #15181a;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 1440px) {
+  /* line 20, ../../src/snippets/globals/_global.scss */
+  body {
+    background-image: url(../images/body-bg.jpg);
+  }
+}
+
+/* line 31, ../../src/snippets/globals/_global.scss */
+a {
+  color: #4a9aea;
+  -webkit-transition: color .15s linear;
+  -o-transition: color .15s linear;
+  transition: color .15s linear;
+}
+/* line 38, ../../src/snippets/globals/_global.scss */
+a:hover {
+  color: #06e;
+}
+
+/* line 69, ../../src/snippets/globals/_global.scss */
+input {
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+/* line 3, ../../src/snippets/globals/mixins/_placeholder.scss */
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+/* line 6, ../../src/snippets/globals/mixins/_placeholder.scss */
+input:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity .3s;
+}
+/* line 9, ../../src/snippets/globals/mixins/_placeholder.scss */
+input:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity .3s;
+}
+/* line 12, ../../src/snippets/globals/mixins/_placeholder.scss */
+input:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+/* line 1, ../../src/snippets/globals/_helpers.scss */
+.sidebar, .search-proj .form-control {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "HelveticaNeueCyr Bold", Arial, Helvetica, sans-serif;
+}
+
+/* line 6, ../../src/snippets/globals/_helpers.scss */
+.sidebar__time-value, .nav__counter {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "HelveticaNeueCyr Regular", Arial, Helvetica, sans-serif;
+}
+
+/* line 13, ../../src/snippets/globals/_helpers.scss */
+.cf::after, .cf::before {
+  display: table;
+  content: "";
+}
+/* line 17, ../../src/snippets/globals/_helpers.scss */
+.cf::after {
+  clear: both;
+}
+
+/* line 29, ../../src/snippets/globals/_helpers.scss */
+a {
+  text-decoration: underline;
+}
+/* line 31, ../../src/snippets/globals/_helpers.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 36, ../../src/snippets/globals/_helpers.scss */
+.services__name, .nav__link, .nav__link-2, .nav__link-3 {
+  text-decoration: none;
+}
+/* line 38, ../../src/snippets/globals/_helpers.scss */
+.services__name:hover, .nav__link:hover, .nav__link-2:hover, .nav__link-3:hover {
+  text-decoration: none;
+}
+
+/* line 50, ../../src/snippets/globals/_helpers.scss */
+.services, .soc-list, .nav__list, .nav__list-2, .nav__list-3 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 56, ../../src/snippets/globals/_helpers.scss */
+.page-wrapper:before, .page-wrapper:after, .services__item:last-child .services__ava:before, .nav__link-2:before, .footer:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  content: "";
+}
+
+/* line 2, ../../src/snippets/globals/_grid.scss */
+.page-wrapper {
+  clear: both;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 1280px;
+  min-height: 100%;
+  max-width: 1440px;
+}
+/* line 10, ../../src/snippets/globals/_grid.scss */
+.page-wrapper:before {
+  bottom: 0;
+  z-index: -1;
+  min-height: 100%;
+  width: 240px;
+  background: #222;
+}
+/* line 18, ../../src/snippets/globals/_grid.scss */
+.page-wrapper:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 240px;
+  z-index: -1;
+  min-height: 100%;
+  background: #e1e1e1;
+}
+
+/*------------------------------------*\
+  $main
+\*------------------------------------*/
+/* line 4, ../../src/snippets/sections/main/_main.scss */
+.main {
+  position: relative;
+  overflow: hidden;
+  background: #e1e1e1;
+}
+
+/**/
+/*------------------------------------*\
+  BEGIN $sidebar
+\*------------------------------------*/
+/* line 4, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar {
+  float: left;
+  padding-bottom: 150px;
+  width: 240px;
+  background: #222;
+}
+/* line 10, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__header {
+  padding: 23px 20px 0;
+  height: 80px;
+  border-bottom: 1px solid #2e2e2e;
+}
+/* line 15, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__row {
+  padding: 0 20px;
+  border-bottom: 1px solid #2e2e2e;
+}
+/* line 19, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar .btn {
+  margin: 20px 0;
+  width: 200px;
+  height: 40px;
+  font-size: 1.8rem;
+}
+/* line 25, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__support {
+  position: relative;
+  z-index: 2;
+  padding: 16px 20px 12px 50px;
+  border-bottom: 1px solid #2e2e2e;
+}
+/* line 30, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__support .ico__phone {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/sprite/ico__phone.png");
+  background-repeat: no-repeat;
+}
+/* line 40, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__support-phone {
+  display: block;
+  color: #ff7200;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+/* line 46, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__support-sub {
+  display: block;
+  color: #6c6c6c;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+/* line 53, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__time {
+  position: relative;
+  z-index: 2;
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 16px;
+  padding: 16px 20px 12px 50px;
+}
+/* line 60, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__time .ico__watch {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/sprite/ico__watch.png");
+  background-repeat: no-repeat;
+}
+/* line 70, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__time-value {
+  display: block;
+  float: left;
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+/* line 78, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__time-local {
+  display: block;
+  float: left;
+  padding-left: 8px;
+  color: #6c6c6c;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+/* line 85, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.sidebar__time-local-sub {
+  display: block;
+  color: #f5be49;
+  font-size: 1rem;
+}
+
+/* line 95, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.search-proj {
+  clear: both;
+  overflow: hidden;
+  padding: 0 20px 18px;
+}
+/* line 99, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.search-proj .form-group {
+  position: relative;
+  z-index: 2;
+  padding: 10px 40px 0 10px;
+  height: 40px;
+  background: #434343;
+}
+/* line 106, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.search-proj .form-control {
+  height: 1.8rem;
+  outline: none;
+  border: none;
+  background: none;
+  color: #888;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+/* line 116, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.search-proj .btn {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  z-index: 2;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../images/sprite/ico__search.png");
+  background-repeat: no-repeat;
+  text-indent: -100px;
+}
+
+/* line 135, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services {
+  clear: both;
+  overflow: hidden;
+  padding: 0 20px 20px;
+}
+/* line 140, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__title {
+  padding-bottom: 15px;
+  color: #ffc64b;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+/* line 146, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__item {
+  display: table;
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* line 153, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__ava {
+  float: left;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #464646;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 162, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__ava:hover + .services__text .services__name {
+  color: #ff7200;
+}
+/* line 167, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__ava-img {
+  display: block;
+  width: 52px;
+  height: 52px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 173, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__item:last-child .services__ava {
+  position: relative;
+  z-index: 2;
+}
+/* line 176, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__item:last-child .services__ava:before {
+  top: 11px;
+  left: 11px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/sprite/ico__plus.png");
+  background-repeat: no-repeat;
+}
+/* line 187, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__text {
+  display: table-cell;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+/* line 192, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__name {
+  display: block;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+/* line 198, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__name:hover {
+  color: #ff7200;
+}
+/* line 202, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.services__subtitle {
+  display: block;
+  margin-top: 3px;
+  color: #989898;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+/* line 212, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list {
+  clear: both;
+  overflow: hidden;
+  padding: 0 20px 20px;
+}
+/* line 217, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__item {
+  float: left;
+  padding-right: 12px;
+}
+/* line 220, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__item:last-child {
+  padding-right: 0;
+}
+/* line 224, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__link {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 232, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__link .ico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+}
+/* line 238, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__link .ico--vk {
+  margin-top: -6.5px;
+  margin-left: -5.5px;
+  width: 11px;
+  height: 13px;
+  background-image: url("../images/sprite/ico__vk.png");
+  background-repeat: no-repeat;
+}
+/* line 246, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__link .ico--fb {
+  margin-top: -7.5px;
+  margin-left: -3.5px;
+  width: 7px;
+  height: 15px;
+  background-image: url("../images/sprite/ico__fb.png");
+  background-repeat: no-repeat;
+}
+/* line 254, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__link .ico--tw {
+  margin-top: -6.5px;
+  margin-left: -8.5px;
+  width: 17px;
+  height: 13px;
+  background-image: url("../images/sprite/ico__tw.png");
+  background-repeat: no-repeat;
+}
+/* line 262, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__link .ico--ok {
+  margin-top: -8px;
+  margin-left: -5px;
+  width: 10px;
+  height: 16px;
+  background-image: url("../images/sprite/ico__ok.png");
+  background-repeat: no-repeat;
+}
+/* line 270, ../../src/snippets/sections/sidebar/_sidebar.scss */
+.soc-list__link .ico--in {
+  margin-top: -7px;
+  margin-left: -7px;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/sprite/ico__in.png");
+  background-repeat: no-repeat;
+}
+
+/* END $sidebar */
+/**/
+/**/
+/*------------------------------------*\
+  BEGIN $nav
+\*------------------------------------*/
+/* line 7, ../../src/snippets/components/nav/_nav.scss */
+.nav__title {
+  padding: 13px 20px;
+  border-bottom: 1px solid #2e2e2e;
+  color: #ff7200;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+/* line 19, ../../src/snippets/components/nav/_nav.scss */
+.nav__item {
+  padding: 15px 10px 15px 50px;
+  border-bottom: 1px solid #2e2e2e;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+/* line 24, ../../src/snippets/components/nav/_nav.scss */
+.nav__item .ico {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  display: block;
+}
+/* line 29, ../../src/snippets/components/nav/_nav.scss */
+.nav__item .ico--humanities {
+  margin-top: -11.5px;
+  width: 19px;
+  height: 23px;
+  background-image: url("../images/sprite/ico__humanities.png");
+  background-repeat: no-repeat;
+}
+/* line 36, ../../src/snippets/components/nav/_nav.scss */
+.nav__item .ico--natural {
+  margin-top: -11px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/sprite/ico__natural.png");
+  background-repeat: no-repeat;
+}
+/* line 43, ../../src/snippets/components/nav/_nav.scss */
+.nav__item .ico--technic {
+  margin-top: -12.5px;
+  width: 25px;
+  height: 19px;
+  background-image: url("../images/sprite/ico__technic.png");
+  background-repeat: no-repeat;
+}
+/* line 50, ../../src/snippets/components/nav/_nav.scss */
+.nav__item .ico--social {
+  margin-top: -11px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/sprite/ico__social.png");
+  background-repeat: no-repeat;
+}
+/* line 57, ../../src/snippets/components/nav/_nav.scss */
+.nav__item .ico--applied {
+  margin-top: -11.5px;
+  width: 18px;
+  height: 23px;
+  background-image: url("../images/sprite/ico__applied.png");
+  background-repeat: no-repeat;
+}
+/* line 64, ../../src/snippets/components/nav/_nav.scss */
+.nav__item .ico--other {
+  margin-top: -11px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../images/sprite/ico__other.png");
+  background-repeat: no-repeat;
+}
+
+/* line 74, ../../src/snippets/components/nav/_nav.scss */
+.nav__link {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+/* line 79, ../../src/snippets/components/nav/_nav.scss */
+.nav__link:hover {
+  color: #c5c5c5;
+}
+/* line 82, ../../src/snippets/components/nav/_nav.scss */
+.opened .nav__link {
+  color: #c5c5c5;
+}
+
+/* line 87, ../../src/snippets/components/nav/_nav.scss */
+.nav__list-2 {
+  padding: 8px 0 0;
+}
+
+/* line 92, ../../src/snippets/components/nav/_nav.scss */
+.nav__item-2 {
+  padding: 4px 0;
+}
+
+/* line 96, ../../src/snippets/components/nav/_nav.scss */
+.nav__link-2 {
+  position: relative;
+  z-index: 2;
+  color: #af7c5a;
+}
+/* line 101, ../../src/snippets/components/nav/_nav.scss */
+.nav__link-2:hover {
+  color: #af7c5a;
+}
+/* line 104, ../../src/snippets/components/nav/_nav.scss */
+.nav__link-2:before {
+  top: 50%;
+  left: -25px;
+  display: none;
+  margin-top: -3px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #af7c5a;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+/* line 115, ../../src/snippets/components/nav/_nav.scss */
+.nav__item-2.opened .nav__link-2:before {
+  display: block;
+}
+
+/* line 121, ../../src/snippets/components/nav/_nav.scss */
+.nav__counter {
+  display: inline-block;
+  margin-left: 5px;
+  color: #5d5d5d;
+}
+
+/* line 128, ../../src/snippets/components/nav/_nav.scss */
+.nav__list-3 {
+  padding: 5px 0;
+}
+
+/* line 133, ../../src/snippets/components/nav/_nav.scss */
+.nav__item-3 {
+  padding: 5px 0;
+}
+
+/* line 137, ../../src/snippets/components/nav/_nav.scss */
+.nav__link-3 {
+  color: #ff7200;
+}
+/* line 140, ../../src/snippets/components/nav/_nav.scss */
+.nav__link-3:hover {
+  color: #ff7200;
+}
+
+/* END $nav */
+/*------------------------------------*\
+  $footer
+\*------------------------------------*/
+/* line 3, ../../src/snippets/globals/mixins/_stickyfooter.scss */
+html, body {
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+/* line 8, ../../src/snippets/globals/mixins/_stickyfooter.scss */
+.page-wrapper {
+  min-height: 100%;
+  height: auto;
+  margin-bottom: -150px !important;
+  position: relative;
+  z-index: 1;
+}
+/* line 14, ../../src/snippets/globals/mixins/_stickyfooter.scss */
+.page-wrapper::after {
+  content: "";
+  display: block;
+  height: 150px;
+}
+
+/* line 20, ../../src/snippets/globals/mixins/_stickyfooter.scss */
+.footer {
+  height: 150px;
+  position: relative;
+  z-index: 2;
+}
+
+/* line 5, ../../src/snippets/sections/footer/_footer.scss */
+.footer {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 240px;
+  min-width: 1280px;
+  max-width: 1440px;
+  background-color: #323232;
+  color: #fff;
+}
+/* line 13, ../../src/snippets/sections/footer/_footer.scss */
+.footer:before {
+  bottom: 0;
+  width: 240px;
+  background: #222;
+}

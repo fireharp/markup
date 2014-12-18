@@ -1,0 +1,62 @@
+// BEGIN $sidebar
+aside.sidebar
+  .sidebar__header
+    a(href=link): img(src='images/inline/studlance-logo.png', width, height, alt='Studlance')
+  .sidebar__row
+    button.btn.btn-warning(type='button') Добавить заказ
+  include ../../components/nav/_nav
+  .sidebar__support
+    i.ico__phone
+    .sidebar__support-phone 8 800 355-45-43
+    span.sidebar__support-sub Служба поддержки
+  .sidebar__time
+    i.ico__watch
+    span.sidebar__time-value 12:44
+    span.sidebar__time-local MSK (GMT+3)
+      span.sidebar__time-local-sub Локальное время
+  // search-proj
+  form#search-proj.search-proj(action=link, method='post', name='search-proj')
+    .form-group
+      input#search-proj__input.form-control.input-md(name='search-proj__input', type='text', placeholder='Поиск по проектам')
+      button#search-proj__submit.btn.btn-primary(name='search-proj__submit')
+  // services
+  ul.services
+    li.services__title Услуги фрилансеров:
+    li.services__item
+      a.services__ava(href=link): img.services__ava-img(src='images/inline/avalancer-1.jpg', width, height, alt='')
+      span.services__text: span.valign
+        a.services__name(href=link) Константин Петров
+        span.services__subtitle Рефераты по химии
+    li.services__item
+      a.services__ava(href=link): img.services__ava-img(src='images/inline/avalancer-2.jpg', width, height, alt='')
+      span.services__text: span.valign
+        a.services__name(href=link) Никита Светлов
+        span.services__subtitle Курсовые по истории
+    li.services__item
+      a.services__ava(href=link): img.services__ava-img(src='images/inline/avalancer-3.jpg', width, height, alt='')
+      span.services__text: span.valign
+        a.services__name(href=link) Генадий Гордеев
+        span.services__subtitle Задачи по программированию
+    li.services__item
+      a.services__ava(href=link): img.services__ava-img(src='images/inline/avalancer-4.jpg', width, height, alt='')
+      span.services__text: span.valign
+        a.services__name(href=link) Владислав Антоновский
+        span.services__subtitle Профессиональный вынос мозга
+    li.services__item
+      a.services__ava(href=link): img.services__ava-img(src='images/inline/avalancer-5.jpg', width, height, alt='')
+      span.services__text: span.valign
+        a.services__name(href=link) Валерия Герасименко
+        span.services__subtitle Сочинения по литре
+    li.services__item
+      a.services__ava(href=link)
+      span.services__text: span.valign
+        a.services__name(href=link) Купить это место
+        span.services__subtitle 20 S в неделю
+  // soc-list
+  ul.soc-list
+    li.soc-list__item: a.soc-list__link(href=link): i.ico.ico--vk
+    li.soc-list__item: a.soc-list__link(href=link): i.ico.ico--fb
+    li.soc-list__item: a.soc-list__link(href=link): i.ico.ico--tw
+    li.soc-list__item: a.soc-list__link(href=link): i.ico.ico--ok
+    li.soc-list__item: a.soc-list__link(href=link): i.ico.ico--in
+// END $sidebar

@@ -1,0 +1,30 @@
+// breakpoint: bp
+@mixin bp($point) {
+  @if ($MQs) {
+    @if $point == screen-alpha {
+      @media #{$screen-alpha} {
+        @content;
+      }
+    } @else if $point == screen-beta {
+      @media #{$screen-beta} {
+        @content;
+      }
+    } @else if $point == screen-gamma {
+      @media #{$screen-gamma}  {
+        @content;
+      }
+    } @else if $point == screen-delta {
+      @media #{$screen-delta}  {
+        @content;
+      }
+    } @else if $point == screen-epsilon {
+      @media #{$screen-epsilon}  {
+        @content;
+      }
+    } @else if $point == screen-zeta {
+      @media #{$screen-zeta}  {
+        @content;
+      }
+    }
+  }
+}

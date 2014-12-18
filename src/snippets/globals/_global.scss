@@ -1,0 +1,80 @@
+/*------------------------------------*\
+  $GLOBAL STYLES
+\*------------------------------------*/
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+html {
+  color:       $base__font-color;
+  font-weight: $base__font-weight;
+  font-size:   $base__font-size;
+  font-family: $base__font-family;
+  line-height: $base__line-height;
+}
+
+body {
+  //overflow-y: scroll;
+  background-color:           #15181a;
+  font-size:                  1.8rem;
+  line-height:                $base__line-height;
+  -webkit-overflow-scrolling: touch;
+  @include bp(screen-beta) {
+    background-image: url(../images/body-bg.jpg);
+  }
+}
+
+a {
+  color:      $link__color;
+  transition: color .15s linear;
+  @extend %tduhn;
+  // vhfa
+  &:visited {
+  }
+  &:hover {
+    color: $link__color--hover;
+  }
+  &:focus {
+  }
+  &:active {
+  }
+}
+
+// Title
+%title--alpha, .title--alpha {
+}
+
+%title--beta {
+}
+
+%title--gamma {
+}
+
+%title--delta {
+}
+
+%title--epsilon {
+}
+
+%title--zeta {
+}
+
+
+
+// opacity: 0; OR font-size OR text-indent/move
+input {
+  opacity:    1;
+  transition: opacity .3s;
+  &:focus {
+    @include placeholder {
+      opacity:    0;
+      transition: opacity .3s;
+    }
+  }
+}
+
+//.pages-preview-delete { @extend %mlp; position:    absolute; top:         10px; right:       100px; z-index:     999; line-height: 1.4; }

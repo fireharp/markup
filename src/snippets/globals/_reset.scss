@@ -1,0 +1,49 @@
+@if $include-html-classes {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html, button, input, select, textarea {
+    color: $base__font-color;
+  }
+  hr {
+    display:    block;
+    height:     1px;
+    border:     0;
+    border-top: 1px solid #cccccc;
+    margin:     1em 0;
+    padding:    0;
+  }
+  audio,
+  canvas,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  img {
+    display: inline-block;
+  }
+  img, object, embed, video {
+    max-width: 100%;
+  }
+  video {
+    height: auto;
+  }
+  form {
+    display: block;
+    margin:  0;
+    padding: 0;
+    border:  0;
+    outline: none;
+  }
+  textarea {
+    resize: vertical;
+  }
+  select {
+    width: 100%;
+  }
+  ::selection {
+    background:  $base__selection-bg;
+    text-shadow: $base__selection-text-shadow;
+  }
+}
