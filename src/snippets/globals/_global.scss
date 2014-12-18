@@ -10,22 +10,30 @@
 }
 
 html {
-  color:       $base__font-color;
-  font-weight: $base__font-weight;
-  font-size:   $base__font-size;
-  font-family: $base__font-family;
-  line-height: $base__line-height;
+  background-color: #15181a;
+  color:            $base__font-color;
+  font-weight:      $base__font-weight;
+  font-size:        $base__font-size;
+  font-family:      $base__font-family;
+  line-height:      $base__line-height;
+  @include bp(screen-beta) {
+    background-image:  url(../images/html-bg.jpg);
+    background-repeat: repeat;
+  }
 }
 
 body {
   //overflow-y: scroll;
-  background-color:           #15181a;
+  background-color:           transparent;
   font-size:                  1.8rem;
   line-height:                $base__line-height;
   -webkit-overflow-scrolling: touch;
-  @include bp(screen-beta) {
-    background-image: url(../images/body-bg.jpg);
-  }
+//  @include bp(screen-beta) {
+//    background-image:      url(../images/body-bg.png);
+//    background-attachment: fixed;
+//    background-position:   center center;
+//    background-repeat:     no-repeat;
+//  }
 }
 
 a {
@@ -62,8 +70,6 @@ a {
 
 %title--zeta {
 }
-
-
 
 // opacity: 0; OR font-size OR text-indent/move
 input {

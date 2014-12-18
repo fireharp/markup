@@ -9,40 +9,42 @@
 }
 /* line 12, ../../src/snippets/globals/_global.scss */
 html {
+  background-color: #15181a;
   color: #222;
   font-weight: 400;
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
 }
+@media (min-width: 1440px) {
+  /* line 12, ../../src/snippets/globals/_global.scss */
+  html {
+    background-image: url(../images/html-bg.jpg);
+    background-repeat: repeat;
+  }
+}
 
-/* line 20, ../../src/snippets/globals/_global.scss */
+/* line 25, ../../src/snippets/globals/_global.scss */
 body {
-  background-color: #15181a;
+  background-color: transparent;
   font-size: 1.8rem;
   line-height: 1.2;
   -webkit-overflow-scrolling: touch;
 }
-@media (min-width: 1440px) {
-  /* line 20, ../../src/snippets/globals/_global.scss */
-  body {
-    background-image: url(../images/body-bg.jpg);
-  }
-}
 
-/* line 31, ../../src/snippets/globals/_global.scss */
+/* line 39, ../../src/snippets/globals/_global.scss */
 a {
   color: #4a9aea;
   -webkit-transition: color .15s linear;
   -o-transition: color .15s linear;
   transition: color .15s linear;
 }
-/* line 38, ../../src/snippets/globals/_global.scss */
+/* line 46, ../../src/snippets/globals/_global.scss */
 a:hover {
   color: #06e;
 }
 
-/* line 69, ../../src/snippets/globals/_global.scss */
+/* line 75, ../../src/snippets/globals/_global.scss */
 input {
   opacity: 1;
   -webkit-transition: opacity .3s;
@@ -309,6 +311,7 @@ a:hover {
   padding: 0;
   width: 20px;
   height: 20px;
+  outline: none !important;
   border: none;
   background-color: transparent;
   background-image: url("../images/sprite/ico__search.png");
@@ -316,20 +319,20 @@ a:hover {
   text-indent: -100px;
 }
 
-/* line 135, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 136, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services {
   clear: both;
   overflow: hidden;
   padding: 0 20px 20px;
 }
-/* line 140, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 141, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__title {
   padding-bottom: 15px;
   color: #ffc64b;
   font-size: 1.6rem;
   line-height: 1.8rem;
 }
-/* line 146, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 147, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__item {
   display: table;
   clear: both;
@@ -337,7 +340,7 @@ a:hover {
   margin-bottom: 20px;
   width: 100%;
 }
-/* line 153, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 154, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__ava {
   float: left;
   overflow: hidden;
@@ -347,11 +350,11 @@ a:hover {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 162, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 163, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__ava:hover + .services__text .services__name {
   color: #ff7200;
 }
-/* line 167, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 168, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__ava-img {
   display: block;
   width: 52px;
@@ -359,12 +362,12 @@ a:hover {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 173, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 174, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__item:last-child .services__ava {
   position: relative;
   z-index: 2;
 }
-/* line 176, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 177, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__item:last-child .services__ava:before {
   top: 11px;
   left: 11px;
@@ -373,24 +376,24 @@ a:hover {
   background-image: url("../images/sprite/ico__plus.png");
   background-repeat: no-repeat;
 }
-/* line 187, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 188, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__text {
   display: table-cell;
   padding-left: 10px;
   vertical-align: middle;
 }
-/* line 192, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 193, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__name {
   display: block;
   color: #fff;
   font-size: 1.4rem;
   line-height: 1.6rem;
 }
-/* line 198, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 199, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__name:hover {
   color: #ff7200;
 }
-/* line 202, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 203, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .services__subtitle {
   display: block;
   margin-top: 3px;
@@ -400,22 +403,22 @@ a:hover {
   line-height: 1.4rem;
 }
 
-/* line 212, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 213, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list {
   clear: both;
   overflow: hidden;
   padding: 0 20px 20px;
 }
-/* line 217, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 218, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__item {
   float: left;
   padding-right: 12px;
 }
-/* line 220, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 221, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__item:last-child {
   padding-right: 0;
 }
-/* line 224, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 225, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__link {
   position: relative;
   z-index: 2;
@@ -426,7 +429,7 @@ a:hover {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 232, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 233, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__link .ico {
   position: absolute;
   top: 50%;
@@ -434,7 +437,7 @@ a:hover {
   z-index: 2;
   display: block;
 }
-/* line 238, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 239, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__link .ico--vk {
   margin-top: -6.5px;
   margin-left: -5.5px;
@@ -443,7 +446,7 @@ a:hover {
   background-image: url("../images/sprite/ico__vk.png");
   background-repeat: no-repeat;
 }
-/* line 246, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 247, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__link .ico--fb {
   margin-top: -7.5px;
   margin-left: -3.5px;
@@ -452,7 +455,7 @@ a:hover {
   background-image: url("../images/sprite/ico__fb.png");
   background-repeat: no-repeat;
 }
-/* line 254, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 255, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__link .ico--tw {
   margin-top: -6.5px;
   margin-left: -8.5px;
@@ -461,7 +464,7 @@ a:hover {
   background-image: url("../images/sprite/ico__tw.png");
   background-repeat: no-repeat;
 }
-/* line 262, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 263, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__link .ico--ok {
   margin-top: -8px;
   margin-left: -5px;
@@ -470,7 +473,7 @@ a:hover {
   background-image: url("../images/sprite/ico__ok.png");
   background-repeat: no-repeat;
 }
-/* line 270, ../../src/snippets/sections/sidebar/_sidebar.scss */
+/* line 271, ../../src/snippets/sections/sidebar/_sidebar.scss */
 .soc-list__link .ico--in {
   margin-top: -7px;
   margin-left: -7px;
