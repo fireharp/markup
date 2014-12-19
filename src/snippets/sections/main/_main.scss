@@ -2,6 +2,9 @@
   $main
 \*------------------------------------*/
 .main {
-  margin-bottom: -150px;
-  background:    #e1e1e1;
+  position:       relative;
+  z-index:        2;
+  overflow:       hidden;
+  padding-bottom: 150px;
+  background:     #e1e1e1;
 }

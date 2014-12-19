@@ -7,6 +7,7 @@ $context: 1040;
   right:            0;
   bottom:           0;
   left:             240px;
+  z-index:          3;
   padding-top:      25px;
   height:           150px;
   background-color: #323232;
@@ -17,12 +18,12 @@ $context: 1040;
     @extend %mlp;
     float:        left;
     padding-left: 40px;
-    width:        perc(195, $context);
+    width:        perc(220, $context);
   }
   &__info {
     float:        left;
     padding-left: 60px;
-    width:        perc(240, $context);
+    width:        perc(280, $context);
     color:        #8f8f8f;
     &-b {
       display:      inline-block;

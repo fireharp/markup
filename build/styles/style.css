@@ -79,7 +79,7 @@ input:focus:-ms-input-placeholder {
 }
 
 /* line 1, ../../src/snippets/globals/_helpers.scss */
-.sidebar, .search-proj .form-control {
+.header__btn, .sidebar, .search-proj .form-control {
   font-weight: 700;
   font-style: normal;
   font-family: "HelveticaNeueCyr Bold", Arial, Helvetica, sans-serif;
@@ -112,11 +112,11 @@ a:hover {
 }
 
 /* line 36, ../../src/snippets/globals/_helpers.scss */
-.services__name, .nav__link, .nav__link-2, .nav__link-3 {
+.header__btn, .services__name, .nav__link, .nav__link-2, .nav__link-3 {
   text-decoration: none;
 }
 /* line 38, ../../src/snippets/globals/_helpers.scss */
-.services__name:hover, .nav__link:hover, .nav__link-2:hover, .nav__link-3:hover {
+.header__btn:hover, .services__name:hover, .nav__link:hover, .nav__link-2:hover, .nav__link-3:hover {
   text-decoration: none;
 }
 
@@ -163,10 +163,154 @@ a:hover {
 \*------------------------------------*/
 /* line 4, ../../src/snippets/sections/main/_main.scss */
 .main {
-  margin-bottom: -150px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding-bottom: 150px;
   background: #e1e1e1;
 }
 
+/**/
+/*------------------------------------*\
+  BEGIN $header
+\*------------------------------------*/
+/* line 4, ../../src/snippets/components/header/_header.scss */
+.header {
+  padding: 20px;
+  background: #d9d9d9;
+}
+
+/* line 9, ../../src/snippets/components/header/_header.scss */
+.header__btn {
+  position: relative;
+  z-index: 2;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  padding: 7px 10px;
+  height: 40px;
+  border: 3px solid #ccc;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #e8e8e8;
+  color: #4c4c4c !important;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+/* line 26, ../../src/snippets/components/header/_header.scss */
+.header__btn--notext .ico {
+  margin-right: 1px !important;
+}
+/* line 30, ../../src/snippets/components/header/_header.scss */
+.header__btn-row .header__btn {
+  margin-right: 0;
+  border-right: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+/* line 34, ../../src/snippets/components/header/_header.scss */
+.header__btn-row .header__btn:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+/* line 37, ../../src/snippets/components/header/_header.scss */
+.header__btn-row .header__btn:last-child {
+  border-right: 3px solid #ccc;
+  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+/* line 42, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico {
+  display: block;
+  float: left;
+  margin-right: 8px;
+}
+/* line 46, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico__notice {
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/sprite/ico__notice.png");
+  background-repeat: no-repeat;
+}
+/* line 52, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico__list {
+  margin-top: 1px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../images/sprite/ico__list.png");
+  background-repeat: no-repeat;
+}
+/* line 59, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico__stats {
+  margin-top: 1px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../images/sprite/ico__stats.png");
+  background-repeat: no-repeat;
+}
+/* line 66, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico__cart {
+  margin-top: 1px;
+  width: 20px;
+  height: 19px;
+  background-image: url("../images/sprite/ico__cart.png");
+  background-repeat: no-repeat;
+}
+/* line 73, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico__rub {
+  margin-top: 1px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/sprite/ico__rub.png");
+  background-repeat: no-repeat;
+}
+/* line 80, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico__user {
+  margin-top: 1px;
+  width: 15px;
+  height: 17px;
+  background-image: url("../images/sprite/ico__user.png");
+  background-repeat: no-repeat;
+}
+/* line 87, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico__gear {
+  margin-top: 1px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../images/sprite/ico__gear.png");
+  background-repeat: no-repeat;
+}
+/* line 94, ../../src/snippets/components/header/_header.scss */
+.header__btn .ico__exit {
+  margin-top: 1px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../images/sprite/ico__exit.png");
+  background-repeat: no-repeat;
+}
+
+/* line 104, ../../src/snippets/components/header/_header.scss */
+.header__btn-counter {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: block;
+  padding: 0 6px;
+  min-width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #009cc3;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* line 122, ../../src/snippets/components/header/_header.scss */
+.header__btn-row--right {
+  float: right;
+}
+
+/* END $header */
 /**/
 /*------------------------------------*\
   BEGIN $sidebar
@@ -646,6 +790,7 @@ a:hover {
   right: 0;
   bottom: 0;
   left: 240px;
+  z-index: 3;
   padding-top: 25px;
   height: 150px;
   background-color: #323232;
@@ -653,20 +798,20 @@ a:hover {
   font-size: 1.4rem;
   line-height: 2.4rem;
 }
-/* line 16, ../../src/snippets/sections/footer/_footer.scss */
+/* line 17, ../../src/snippets/sections/footer/_footer.scss */
 .footer__links {
   float: left;
   padding-left: 40px;
-  width: 18.75%;
+  width: 21.15385%;
 }
-/* line 22, ../../src/snippets/sections/footer/_footer.scss */
+/* line 23, ../../src/snippets/sections/footer/_footer.scss */
 .footer__info {
   float: left;
   padding-left: 60px;
-  width: 23.07692%;
+  width: 26.92308%;
   color: #8f8f8f;
 }
-/* line 27, ../../src/snippets/sections/footer/_footer.scss */
+/* line 28, ../../src/snippets/sections/footer/_footer.scss */
 .footer__info-b {
   display: inline-block;
   padding-left: 4px;

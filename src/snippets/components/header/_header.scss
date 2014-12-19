@@ -1,0 +1,126 @@
+/*------------------------------------*\
+  BEGIN $header
+\*------------------------------------*/
+.header {
+  padding:    20px;
+  background: #d9d9d9;
+}
+
+.header__btn {
+  @extend %font--alpha;
+  @extend %tdn;
+  position:         relative;
+  z-index:          2;
+  display:          block;
+  float:            left;
+  margin-right:     10px;
+  padding:          7px 10px;
+  height:           40px;
+  border:           3px solid #ccc;
+  border-radius:    3px;
+  background-color: #e8e8e8;
+  color:            #4c4c4c !important;
+  font-size:        1.6rem;
+  line-height:      2rem;
+  &--notext {
+    .ico {
+      margin-right: 1px !important;
+    }
+  }
+  .header__btn-row & {
+    margin-right:  0;
+    border-right:  none;
+    border-radius: 0;
+    &:first-child {
+      border-radius: 3px 0 0 3px;
+    }
+    &:last-child {
+      border-right:  3px solid #ccc;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+  .ico {
+    display:      block;
+    float:        left;
+    margin-right: 8px;
+    &__notice {
+      width:             18px;
+      height:            18px;
+      background-image:  url("../images/sprite/ico__notice.png");
+      background-repeat: no-repeat;
+    }
+    &__list {
+      margin-top:        1px;
+      width:             17px;
+      height:            17px;
+      background-image:  url("../images/sprite/ico__list.png");
+      background-repeat: no-repeat;
+    }
+    &__stats {
+      margin-top:        1px;
+      width:             17px;
+      height:            17px;
+      background-image:  url("../images/sprite/ico__stats.png");
+      background-repeat: no-repeat;
+    }
+    &__cart {
+      margin-top:        1px;
+      width:             20px;
+      height:            19px;
+      background-image:  url("../images/sprite/ico__cart.png");
+      background-repeat: no-repeat;
+    }
+    &__rub {
+      margin-top:        1px;
+      width:             18px;
+      height:            18px;
+      background-image:  url("../images/sprite/ico__rub.png");
+      background-repeat: no-repeat;
+    }
+    &__user {
+      margin-top:        1px;
+      width:             15px;
+      height:            17px;
+      background-image:  url("../images/sprite/ico__user.png");
+      background-repeat: no-repeat;
+    }
+    &__gear {
+      margin-top:        1px;
+      width:             17px;
+      height:            17px;
+      background-image:  url("../images/sprite/ico__gear.png");
+      background-repeat: no-repeat;
+    }
+    &__exit {
+      margin-top:        1px;
+      width:             17px;
+      height:            17px;
+      background-image:  url("../images/sprite/ico__exit.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.header__btn-counter {
+  position:         absolute;
+  top:              -8px;
+  right:            -8px;
+  display:          block;
+  padding:          0 6px;
+  min-width:        20px;
+  height:           20px;
+  border-radius:    50%;
+  background-color: #009cc3;
+  color:            #fff;
+  font-size:        1.4rem;
+}
+
+.header__btn-row {
+
+}
+
+.header__btn-row--right {
+  float: right;
+}
+
+/* END $header */

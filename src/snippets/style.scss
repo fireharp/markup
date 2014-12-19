@@ -8,6 +8,7 @@
 @import "globals/grid";
 // Sections and Components (BEM > Blocks)
 @import "sections/main/main";
+/**/@import "components/header/header";
 /**/@import "sections/sidebar/sidebar";
 /**//**/@import "components/nav/nav";
 @import "sections/footer/footer";
