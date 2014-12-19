@@ -41,14 +41,14 @@ body {
 
 /* line 45, ../../src/snippets/globals/_global.scss */
 a {
-  color: #4a9aea;
+  color: #009cc3;
   -webkit-transition: color .15s linear;
   -o-transition: color .15s linear;
   transition: color .15s linear;
 }
 /* line 52, ../../src/snippets/globals/_global.scss */
 a:hover {
-  color: #06e;
+  color: #4a9aea;
 }
 
 /* line 81, ../../src/snippets/globals/_global.scss */
@@ -123,7 +123,7 @@ a:hover {
 }
 
 /* line 50, ../../src/snippets/globals/_helpers.scss */
-.services, .soc-list, .nav__list, .nav__list-2, .nav__list-3 {
+.services, .soc-list, .nav__list, .nav__list-2, .nav__list-3, .footer__links {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -642,13 +642,36 @@ a:hover {
 /*------------------------------------*\
   $footer
 \*------------------------------------*/
-/* line 4, ../../src/snippets/sections/footer/_footer.scss */
+/* line 5, ../../src/snippets/sections/footer/_footer.scss */
 .footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 240px;
+  padding-top: 25px;
   height: 150px;
   background-color: #323232;
   color: #fff;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+/* line 16, ../../src/snippets/sections/footer/_footer.scss */
+.footer__links {
+  float: left;
+  padding-left: 40px;
+  width: 18.75%;
+}
+/* line 22, ../../src/snippets/sections/footer/_footer.scss */
+.footer__info {
+  float: left;
+  padding-left: 60px;
+  width: 23.07692%;
+  color: #8f8f8f;
+}
+/* line 27, ../../src/snippets/sections/footer/_footer.scss */
+.footer__info-b {
+  display: inline-block;
+  padding-left: 4px;
+  color: #db9000;
+  font-weight: bold;
 }

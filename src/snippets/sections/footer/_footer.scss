@@ -1,12 +1,34 @@
 /*------------------------------------*\
   $footer
 \*------------------------------------*/
+$context: 1040;
 .footer {
   position:         absolute;
   right:            0;
   bottom:           0;
   left:             240px;
+  padding-top:      25px;
   height:           150px;
   background-color: #323232;
   color:            #fff;
+  font-size:        1.4rem;
+  line-height:      2.4rem;
+  &__links {
+    @extend %mlp;
+    float:        left;
+    padding-left: 40px;
+    width:        perc(195, $context);
+  }
+  &__info {
+    float:        left;
+    padding-left: 60px;
+    width:        perc(240, $context);
+    color:        #8f8f8f;
+    &-b {
+      display:      inline-block;
+      padding-left: 4px;
+      color:        #db9000;
+      font-weight:  bold;
+    }
+  }
 }
