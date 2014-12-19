@@ -3,10 +3,11 @@
 \*------------------------------------*/
 .sidebar {
   @extend %font--alpha;
-  float:          left;
-  padding-bottom: 150px;
-  width:          240px;
-  background:     #222;
+  position:   relative;
+  z-index:    2;
+  float:      left;
+  width:      240px;
+  background: #222;
   &__header {
     padding:       23px 20px 0;
     height:        80px;

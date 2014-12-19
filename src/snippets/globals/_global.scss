@@ -9,6 +9,12 @@
   width: device-width;
 }
 
+html, body {
+  position: relative;
+  z-index:  0;
+  height:   100%;
+}
+
 html {
   background-color: #15181a;
   color:            $base__font-color;
@@ -28,12 +34,12 @@ body {
   font-size:                  1.8rem;
   line-height:                $base__line-height;
   -webkit-overflow-scrolling: touch;
-//  @include bp(screen-beta) {
-//    background-image:      url(../images/body-bg.png);
-//    background-attachment: fixed;
-//    background-position:   center center;
-//    background-repeat:     no-repeat;
-//  }
+  //  @include bp(screen-beta) {
+  //    background-image:      url(../images/body-bg.png);
+  //    background-attachment: fixed;
+  //    background-position:   center center;
+  //    background-repeat:     no-repeat;
+  //  }
 }
 
 a {

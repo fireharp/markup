@@ -1,19 +1,12 @@
 /*------------------------------------*\
   $footer
 \*------------------------------------*/
-@include stickyfooter(150px);
 .footer {
-  margin-right:     auto;
-  margin-left:      auto;
-  padding-left:     240px;
-  min-width:        $minw;
-  max-width:        $maxw-alpha;
+  position:         absolute;
+  right:            0;
+  bottom:           0;
+  left:             240px;
+  height:           150px;
   background-color: #323232;
   color:            #fff;
-  &:before {
-    @extend %pseudoBeforeAfter;
-    bottom:     0;
-    width:      240px;
-    background: #222;
-  }
 }
