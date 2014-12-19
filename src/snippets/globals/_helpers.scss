@@ -3,10 +3,17 @@
   font-style:  normal;
   font-family: "HelveticaNeueCyr Bold", $fallback__font;
 }
+
 %font--beta {
   font-weight: 400;
   font-style:  normal;
   font-family: "HelveticaNeueCyr Regular", $fallback__font;
+}
+
+%font--gamma {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: $fallback__font;
 }
 
 .cf {
