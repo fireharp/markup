@@ -23,13 +23,6 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
 }
-@media (min-width: 1440px) {
-  /* line 18, ../../src/snippets/globals/_global.scss */
-  html {
-    background-image: url(../images/html-bg.jpg);
-    background-repeat: repeat;
-  }
-}
 
 /* line 31, ../../src/snippets/globals/_global.scss */
 body {
@@ -54,6 +47,7 @@ a:hover {
 /* line 81, ../../src/snippets/globals/_global.scss */
 input {
   opacity: 1;
+  filter: alpha(opacity=100);
   -webkit-transition: opacity .3s;
   -o-transition: opacity .3s;
   transition: opacity .3s;
@@ -61,22 +55,26 @@ input {
 /* line 3, ../../src/snippets/globals/mixins/_placeholder.scss */
 input:focus::-webkit-input-placeholder {
   opacity: 0;
+  filter: alpha(opacity=0);
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
 }
 /* line 6, ../../src/snippets/globals/mixins/_placeholder.scss */
 input:focus::-moz-placeholder {
   opacity: 0;
+  filter: alpha(opacity=0);
   transition: opacity .3s;
 }
 /* line 9, ../../src/snippets/globals/mixins/_placeholder.scss */
 input:focus:-moz-placeholder {
   opacity: 0;
+  filter: alpha(opacity=0);
   transition: opacity .3s;
 }
 /* line 12, ../../src/snippets/globals/mixins/_placeholder.scss */
 input:focus:-ms-input-placeholder {
   opacity: 0;
+  filter: alpha(opacity=0);
   transition: opacity .3s;
 }
 
@@ -674,4 +672,11 @@ a:hover {
   padding-left: 4px;
   color: #db9000;
   font-weight: bold;
+}
+@media (min-width: 1440px) {
+  /* line 18, ../../src/snippets/globals/_global.scss */
+  html {
+    background-image: url(../images/html-bg.jpg);
+    background-repeat: repeat;
+  }
 }
