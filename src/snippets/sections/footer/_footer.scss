@@ -1,7 +1,7 @@
 /*------------------------------------*\
   $footer
 \*------------------------------------*/
-$context: 1040;
+$ct: 760;
 .footer {
   position:         absolute;
   right:            0;
@@ -18,12 +18,15 @@ $context: 1040;
     @extend %mlp;
     float:        left;
     padding-left: 40px;
-    width:        perc(220, $context);
+    width:        perc(200, $ct);
+    @include bp(screen-beta) {
+      width: perc(150, $ct);
+    }
   }
   &__info {
     float:        left;
     padding-left: 60px;
-    width:        perc(280, $context);
+    width:        perc(280, $ct);
     color:        #8f8f8f;
     &-b {
       display:      inline-block;
