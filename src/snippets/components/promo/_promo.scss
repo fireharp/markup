@@ -3,15 +3,14 @@
 \*------------------------------------*/
 $ct: 1000;
 .promo {
-  padding:    24px 20px 6px 40px;
+  padding:    24px 20px 6px;
   background: #f0f0f0;
   &__item {
     float:               left;
     margin-bottom:       10px;
-    padding-top:         92px;
-    padding-left:        40px;
+    padding:             92px 20px 0 40px;
     min-height:          130px;
-    width:               perc(266, $ct);
+    width:               25%;
     background-position: 0 6px;
     color:               #323232;
     font-size:           1.2rem;
@@ -32,7 +31,7 @@ $ct: 1000;
       background-repeat:   no-repeat;
     }
     &:nth-child(4) {
-      width:               perc(200, $ct);
+//      width:               perc(200, $ct);
       background-image:    url("../images/promo-4.png");
       background-position: 0 0;
       background-repeat:   no-repeat;
@@ -54,7 +53,7 @@ $ct: 1000;
       background-repeat: no-repeat;
     }
     &:nth-child(9) {
-      width:             perc(200, $ct);
+//      width:             perc(200, $ct);
       background-image:  url("../images/promo-8.png");
       background-repeat: no-repeat;
     }

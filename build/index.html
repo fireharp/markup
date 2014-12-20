@@ -46,8 +46,8 @@
       <div class="nav">
         <div class="nav__title">Каталог пользователей:</div>
         <ul class="nav__list">
-          <li class="nav__item"><a href="index.html" class="nav__link"><i class="ico ico--humanities"></i>Гуманитарные науки</a>
-            <li class="nav__item opened"><a href="index.html" class="nav__link"><i class="ico ico--natural"></i>Естественные науки</a>
+          <li class="nav__item"><a href="index.html" class="nav__link"><i class="nav__ico nav__ico--humanities"></i>Гуманитарные науки</a>
+            <li class="nav__item opened"><a href="index.html" class="nav__link"><i class="nav__ico nav__ico--natural"></i>Естественные науки</a>
               <ul class="nav__list-2">
                 <li class="nav__item-2"><a href="index.html" class="nav__link-2">Астрономия<span class="nav__counter">14</span></a>
                 </li>
@@ -81,13 +81,13 @@
                 </li>
               </ul>
             </li>
-            <li class="nav__item"><a href="index.html" class="nav__link"><i class="ico ico--technic"></i>Технические науки</a>
+            <li class="nav__item"><a href="index.html" class="nav__link"><i class="nav__ico nav__ico--technic"></i>Технические науки</a>
             </li>
-            <li class="nav__item"><a href="index.html" class="nav__link"><i class="ico ico--social"></i>Общественные науки</a>
+            <li class="nav__item"><a href="index.html" class="nav__link"><i class="nav__ico nav__ico--social"></i>Общественные науки</a>
             </li>
-            <li class="nav__item"><a href="index.html" class="nav__link"><i class="ico ico--applied"></i>Прикладные науки</a>
+            <li class="nav__item"><a href="index.html" class="nav__link"><i class="nav__ico nav__ico--applied"></i>Прикладные науки</a>
             </li>
-            <li class="nav__item"><a href="index.html" class="nav__link"><i class="ico ico--other"></i>Прочее</a>
+            <li class="nav__item"><a href="index.html" class="nav__link"><i class="nav__ico nav__ico--other"></i>Прочее</a>
             </li>
           </li>
         </ul>
@@ -161,14 +161,18 @@
     <!-- BEGIN $main-->
     <main init-block="_temp.scss" class="main">
       <!-- BEGIN $header-->
-      <div init-block="_temp.scss" class="header cf"><a href="index.html" class="header__btn"><i class="ico ico__notice"></i>События<span class="header__btn-counter">5</span></a><a href="index.html" class="header__btn"><i class="ico ico__list"></i>Мои заказы</a><a href="index.html" title="Статистика"
-        class="header__btn header__btn--notext"><i class="ico ico__stats"></i></a>
-        <div class="header__btn-row"><a href="index.html" title="Корзина" class="header__btn header__btn--notext"><i class="ico ico__cart"></i></a><a href="index.html" class="header__btn"><i class="ico ico__rub"></i>52</a><a href="index.html" class="header__btn">Купить PRO</a>
-        </div>
-        <div class="header__btn-row header__btn-row--right"><a href="index.html" class="header__btn"><i class="ico ico__user"></i>Simpleusername</a><a href="index.html" title="Настройки" class="header__btn header__btn--notext"><i class="ico ico__gear"></i></a>
-          <a href="index.html" title="Выход" class="header__btn header__btn--notext"><i class="ico ico__exit"></i>
+      <div init-block="_temp.scss" class="header cf"><a href="index.html" class="header__btn"><i class="ico ico__notice"></i><span class="header__btn-text">События</span><span class="header__btn-counter">5</span></a><a href="index.html" class="header__btn"><i class="ico ico__list"></i><span class="header__btn-text">Мои заказы</span></a>
+        <a
+        href="index.html" title="Статистика" class="header__btn header__btn--notext"><i class="ico ico__stats"></i>
           </a>
-        </div>
+          <div class="header__btn-row"><a href="index.html" title="Корзина" class="header__btn header__btn--notext"><i class="ico ico__cart"></i></a><a href="index.html" class="header__btn"><i class="ico ico__rub"></i><span class="header__btn-text">52</span></a><a href="index.html"
+            class="header__btn"><span class="header__btn-text">Купить PRO</span></a>
+          </div>
+          <div class="header__btn-row header__btn-row--right"><a href="index.html" class="header__btn"><i class="ico ico__user"></i><span class="header__btn-text header__btn-text--lsh">Simpleusername</span></a><a href="index.html" title="Настройки" class="header__btn header__btn--notext"><i class="ico ico__gear"></i></a>
+            <a
+            href="index.html" title="Выход" class="header__btn header__btn--notext"><i class="ico ico__exit"></i>
+              </a>
+          </div>
       </div>
       <!-- END $header-->
       <!-- BEGIN $carousel-->
@@ -218,44 +222,29 @@
       <!-- BEGIN $promo-->
       <div class="promo cf">
         <div class="promo__item">
-          <p class="promo__text">Опубликуйте
-            <br>заказ</p>
+          <p class="promo__text">Опубликуйте заказ</p>
         </div>
         <div class="promo__item">
-          <p class="promo__text">Выберете интересный
-            <br>заказ и сделайте
-            <br>ставку</p>
+          <p class="promo__text">Выберете интересный заказ и сделайте ставку</p>
         </div>
         <div class="promo__item">
-          <p class="promo__text">Выберете студлансера среди
-            <br>откликнувшихся, либо
-            <br>пригласите из каталога</p>
+          <p class="promo__text">Выберете студлансера среди откликнувшихся, либо пригласите из каталога</p>
         </div>
         <div class="promo__item">
-          <p class="promo__text">Заказчик резервирует
-            <br>стоимость работы на
-            <br>сайте StudLance.ru</p>
+          <p class="promo__text">Заказчик резервирует стоимость работы на сайте StudLance.ru</p>
         </div>
         <div class="promo__decor"></div>
         <div class="promo__item">
-          <p class="promo__text">Контролируйте
-            <br>выполнение работы в
-            <br>специально отведенной
-            <br>рабочей области</p>
+          <p class="promo__text">Контролируйте выполнение работы в специально отведенной рабочей области</p>
         </div>
         <div class="promo__item">
-          <p class="promo__text">Используйте рабочую область
-            <br>для связи с заказчиком и
-            <br>загрузки выполненной работы</p>
+          <p class="promo__text">Используйте рабочую область для связи с заказчиком и загрузки выполненной работы</p>
         </div>
         <div class="promo__item">
-          <p class="promo__text">Проверьте и примите работу
-            <br>студлансера</p>
+          <p class="promo__text">Проверьте и примите работу студлансера</p>
         </div>
         <div class="promo__item">
-          <p class="promo__text">Деньги поступят к вам
-            <br>на счет и будут доступны
-            <br>к выводу</p>
+          <p class="promo__text">Деньги поступят к вам на счет и будут доступны к выводу</p>
         </div>
       </div>
       <!-- END $promo-->

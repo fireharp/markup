@@ -18,14 +18,15 @@ $link__color: #009cc3;
 $link__color--hover: #4a9aea;
 
 // Grid
-$minw: 1280px !default;
+$minw: 1000px !default;
 $maxw: 100%;
 $maxw-alpha: 1440px !default;
 
 // Responsive
 $MQs: true;
-$screen-alpha: "(max-width: #{$minw})";
-$screen-beta: "(min-width: #{$maxw-alpha})";
+$screen-alpha: "(min-width: #{$minw})";
+$screen-beta: "(min-width: 1280px)";
+$screen-gamma: "(min-width: #{$maxw-alpha})";
 
 // Support
 $include-html-classes: true;

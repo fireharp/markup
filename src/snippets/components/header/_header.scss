@@ -14,7 +14,7 @@
   display:          block;
   float:            left;
   margin-right:     10px;
-  padding:          7px 10px;
+  padding:          8px 10px;
   height:           40px;
   border:           3px solid #ccc;
   border-radius:    3px;
@@ -22,11 +22,15 @@
   color:            #4c4c4c !important;
   font-size:        1.6rem;
   line-height:      2rem;
-  &--notext {
-    .ico {
-      margin-right: 1px !important;
-    }
+  transition:       background-color .15s;
+  &:hover {
+    background-color: #eee;
   }
+  //  &--notext {
+  //    .ico {
+  //      margin-right: 1px !important;
+  //    }
+  //  }
   .header__btn-row & {
     margin-right:  0;
     border-right:  none;
@@ -39,10 +43,24 @@
       border-radius: 0 3px 3px 0;
     }
   }
+  &-text {
+    display: block;
+    float:   left;
+    &--lsh {
+      display: none;
+      @include bp(screen-beta) {
+        display: block;
+      }
+    }
+  }
   .ico {
-    display:      block;
-    float:        left;
-    margin-right: 8px;
+    display:    block;
+    float:      left;
+    margin-top: 1px;
+    & + .header__btn-text {
+      margin-left: 8px;
+    }
+    //    margin-right: 8px;
     &__notice {
       width:             18px;
       height:            18px;
@@ -50,49 +68,49 @@
       background-repeat: no-repeat;
     }
     &__list {
-      margin-top:        1px;
+      //      margin-top:        1px;
       width:             17px;
       height:            17px;
       background-image:  url("../images/sprite/ico__list.png");
       background-repeat: no-repeat;
     }
     &__stats {
-      margin-top:        1px;
+      //      margin-top:        1px;
       width:             17px;
       height:            17px;
       background-image:  url("../images/sprite/ico__stats.png");
       background-repeat: no-repeat;
     }
     &__cart {
-      margin-top:        1px;
+      //      margin-top:        1px;
       width:             20px;
       height:            19px;
       background-image:  url("../images/sprite/ico__cart.png");
       background-repeat: no-repeat;
     }
     &__rub {
-      margin-top:        1px;
+      //      margin-top:        1px;
       width:             18px;
       height:            18px;
       background-image:  url("../images/sprite/ico__rub.png");
       background-repeat: no-repeat;
     }
     &__user {
-      margin-top:        1px;
+      //      margin-top:        1px;
       width:             15px;
       height:            17px;
       background-image:  url("../images/sprite/ico__user.png");
       background-repeat: no-repeat;
     }
     &__gear {
-      margin-top:        1px;
+      //      margin-top:        1px;
       width:             17px;
       height:            17px;
       background-image:  url("../images/sprite/ico__gear.png");
       background-repeat: no-repeat;
     }
     &__exit {
-      margin-top:        1px;
+      //      margin-top:        1px;
       width:             17px;
       height:            17px;
       background-image:  url("../images/sprite/ico__exit.png");

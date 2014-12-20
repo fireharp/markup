@@ -22,7 +22,7 @@ html {
   font-size:        $base__font-size;
   font-family:      $base__font-family;
   line-height:      $base__line-height;
-  @include bp(screen-beta) {
+  @include bp(screen-gamma) {
     background-image:  url(../images/html-bg.jpg);
     background-repeat: repeat;
   }
@@ -34,7 +34,7 @@ body {
   font-size:                  1.8rem;
   line-height:                $base__line-height;
   -webkit-overflow-scrolling: touch;
-  //  @include bp(screen-beta) {
+  //  @include bp(screen-gamma) {
   //    background-image:      url(../images/body-bg.png);
   //    background-attachment: fixed;
   //    background-position:   center center;

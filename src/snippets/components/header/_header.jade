@@ -2,22 +2,22 @@
 .header.cf(init-block='_temp.scss')
   a.header__btn(href=link)
     i.ico.ico__notice
-    | События
+    span.header__btn-text События
     span.header__btn-counter 5
   a.header__btn(href=link)
     i.ico.ico__list
-    | Мои заказы
+    span.header__btn-text Мои заказы
   a.header__btn.header__btn--notext(href=link, title='Статистика'): i.ico.ico__stats
   .header__btn-row
     a.header__btn.header__btn--notext(href=link, title='Корзина'): i.ico.ico__cart
     a.header__btn(href=link)
       i.ico.ico__rub
-      | 52
-    a.header__btn(href=link) Купить PRO
+      span.header__btn-text 52
+    a.header__btn(href=link): span.header__btn-text Купить PRO
   .header__btn-row.header__btn-row--right
     a.header__btn(href=link)
       i.ico.ico__user
-      | Simpleusername
+      span.header__btn-text.header__btn-text--lsh Simpleusername
     a.header__btn.header__btn--notext(href=link, title='Настройки'): i.ico.ico__gear
     a.header__btn.header__btn--notext(href=link, title='Выход'): i.ico.ico__exit
 // END $header

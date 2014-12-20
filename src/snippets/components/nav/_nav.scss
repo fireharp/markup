@@ -21,66 +21,85 @@
   border-bottom: 1px solid #2e2e2e;
   font-size:     1.5rem;
   line-height:   1.8rem;
-  .ico {
-    position: absolute;
-    top:      50%;
-    left:     -30px;
-    display:  block;
-    &--humanities {
-      margin-top:        #{-23 / 2}px;
-      width:             19px;
-      height:            23px;
-      background-image:  url("../images/sprite/ico__humanities.png");
-      background-repeat: no-repeat;
-    }
-    &--natural {
-      margin-top:        #{-22/2}px;
-      width:             22px;
-      height:            22px;
-      background-image:  url("../images/sprite/ico__natural.png");
-      background-repeat: no-repeat;
-    }
-    &--technic {
-      margin-top:        #{-25/2}px;
-      width:             25px;
-      height:            19px;
-      background-image:  url("../images/sprite/ico__technic.png");
-      background-repeat: no-repeat;
-    }
-    &--social {
-      margin-top:        #{-22/2}px;
-      width:             22px;
-      height:            22px;
-      background-image:  url("../images/sprite/ico__social.png");
-      background-repeat: no-repeat;
-    }
-    &--applied {
-      margin-top:        #{-23/2}px;
-      width:             18px;
-      height:            23px;
-      background-image:  url("../images/sprite/ico__applied.png");
-      background-repeat: no-repeat;
-    }
-    &--other {
-      margin-top:        #{-22/2}px;
-      width:             22px;
-      height:            22px;
-      background-image:  url("../images/sprite/ico__other.png");
-      background-repeat: no-repeat;
-    }
-  }
 }
 
 .nav__link {
   @extend %tdn;
   position: relative;
   z-index:  2;
-  color:    #fff;
+  color:    #c5c5c5;
   &:hover {
-    color: #c5c5c5;
+    color: #fff;
   }
   .opened & {
-    color: #c5c5c5;
+    color: #fff;
+  }
+}
+
+.nav__ico {
+  position: absolute;
+  top:      50%;
+  left:     -30px;
+  display:  block;
+  &--humanities {
+    margin-top:        #{-23 / 2}px;
+    width:             19px;
+    height:            23px;
+    background-image:  url("../images/sprite/ico__humanities.png");
+    background-repeat: no-repeat;
+    .nav__link:hover &, .opened & {
+      background-image:  url("../images/sprite/ico__humanities--white.png");
+    }
+  }
+  &--natural {
+    margin-top:        #{-22/2}px;
+    width:             22px;
+    height:            22px;
+    background-image:  url("../images/sprite/ico__natural.png");
+    background-repeat: no-repeat;
+    .nav__link:hover &, .opened & {
+      background-image:url("../images/sprite/ico__natural--white.png");
+    }
+  }
+  &--technic {
+    margin-top:        #{-25/2}px;
+    width:             25px;
+    height:            19px;
+    background-image:  url("../images/sprite/ico__technic.png");
+    background-repeat: no-repeat;
+    .nav__link:hover &, .opened & {
+      background-image:url("../images/sprite/ico__technic--white.png");
+    }
+  }
+  &--social {
+    margin-top:        #{-22/2}px;
+    width:             22px;
+    height:            22px;
+    background-image:  url("../images/sprite/ico__social.png");
+    background-repeat: no-repeat;
+    .nav__link:hover &, .opened & {
+      background-image:url("../images/sprite/ico__social--white.png");
+    }
+  }
+  &--applied {
+    margin-top:        #{-23/2}px;
+    width:             18px;
+    height:            23px;
+    background-image:  url("../images/sprite/ico__applied.png");
+    background-repeat: no-repeat;
+    .nav__link:hover &, .opened & {
+      background-image:url("../images/sprite/ico__applied--white.png");
+    }
+  }
+  &--other {
+    margin-top:        #{-22/2}px;
+    width:             22px;
+    height:            22px;
+    background-image:  url("../images/sprite/ico__other.png");
+    background-repeat: no-repeat;
+    .nav__link:hover &, .opened & {
+      background-image:url("../images/sprite/ico__other--white.png");
+    }
   }
 }
 

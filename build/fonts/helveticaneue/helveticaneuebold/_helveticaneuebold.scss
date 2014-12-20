@@ -1,0 +1,26 @@
+$name: quote("HelveticaNeue Bold");
+$path: '../fonts/helveticaneue/helveticaneuebold/helveticaneuebold';
+$weight: 700;
+$style: normal;
+@font-face {
+  font-family: $name;
+  font-style:  $style;
+  font-weight: $weight;
+  src:         local(#{$name}),
+               url('#{$path}.woff2') format('woff2'),
+               url('#{$path}.woff') format('woff'),
+               url('#{$path}.ttf') format('truetype'),
+               url('#{$path}.svg#HelveticaNeueBold') format('svg');
+}
+
+@media style-ie {
+  @if $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+    @font-face {
+      font-family: $name;
+      font-style:  $style;
+      font-weight: $weight;
+      src:         url('#{$path}.eot');
+      src:         url('#{$path}.eot?#iefix') format('embedded-opentype');
+    }
+  }
+}
