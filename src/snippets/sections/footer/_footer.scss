@@ -19,6 +19,9 @@ $ct: 760;
     float:        left;
     padding-left: 40px;
     width:        perc(200, $ct);
+    &-link {
+      @extend %tduhn;
+    }
     @include bp(screen-beta) {
       width: perc(150, $ct);
     }

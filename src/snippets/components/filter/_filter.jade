@@ -1,0 +1,66 @@
+// BEGIN $filter
+.filter.cf
+  ul.filter__list
+    li.filter__list-item.filter__list-item--active: a.filter__list-link(href=link) Все проекты
+    li.filter__list-item: a.filter__list-link(href=link) Только для PRO
+    li.filter__list-item: a.filter__list-link(href=link) Пользователи
+    li.filter__list-item: a.filter__list-link(href=link) Магазин
+    li.filter__list-item: a.filter__list-link(href=link) Блоги
+    li.filter__list-item.filter__list-item--right: button.filter__btn(type='button') Фильтр
+  form#filter.filter__form.cf(action=link, method='post', name='filter', init-block='_temp.scss')
+    include range-s/_range-s
+    .filter__row
+      .filter__col.filter__col--1
+        span.filter__text Дата публикации от:
+        .datepicker date label
+        span.filter__text до:
+        .datepicker date label
+      .filter__col.filter__col--2
+        label.control-label(for='min-days') Срок сдачи (в днях) от:
+        input#min-days.form-control(type='text', placeholder='1', name='min-days')
+        label.control-label(for='max-days') до:
+        input#min-days.form-control(type='text', placeholder='365', name='max-days')
+      .filter__col.filter__col--3
+        select#type-job.form-control(name='type-job')
+          option(value='Тип работы') Тип работы
+          option(value='По найму') По найму
+          option(value='Удалённо') Удалённо
+    ul.filter__fw-list
+      li.filter__fw-list-item
+        input#only-myspec.form-control(type='checkbox', name='only-myspec')
+        label.control-label(for='only-myspec')
+          span.filter__fw-list-mq Только
+          | мои специализации
+      | &nbsp;
+      li.filter__fw-list-item
+        input#only-hot.form-control(type='checkbox', name='only-hot')
+        label.control-label(for='only-hot')
+          span.filter__fw-list-mq Только
+          | срочные заказы
+      | &nbsp;
+      li.filter__fw-list-item
+        input#only-pro.form-control(type='checkbox', name='only-pro')
+        label.control-label(for='only-pro')
+          span.filter__fw-list-mq Только для
+          span.filter__ico-pro(title='Только для PRO')
+      | &nbsp;
+      li.filter__fw-list-item
+        input#only-verifed.form-control(type='checkbox', name='only-verifed')
+        label.control-label(for='only-verifed')
+          span.filter__fw-list-mq Только для верифицированных
+          span.filter__ico-verifed(title='Только для верифицированных')
+      | &nbsp;
+      li.filter__fw-list-item
+        input#verifed.form-control(type='checkbox', name='verifed')
+        label.control-label(for='verifed') < 2 ответов в заказе
+    .filter__row.filter__row--specialization
+      select#specialization.form-control(name='specialization')
+        option(value='Выберите специализацию') Выберите специализацию
+        option(value='Естественные науки:') Естественные науки:
+      button.btn(type='button') Добавить
+      button.btn.specialization-tag(type='button') География
+      button.btn.specialization-tag(type='button') Геология
+      button.btn.specialization-tag(type='button') Материаловедение
+      button.btn.specialization-tag(type='button') Минералогия
+      button.btn.filter__submit#filter__submit(type='button') Найти заказы
+// END $filter

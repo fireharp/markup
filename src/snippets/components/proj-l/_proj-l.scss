@@ -1,0 +1,236 @@
+/*------------------------------------*\
+  BEGIN $proj-l
+\*------------------------------------*/
+.proj-l {
+  padding: 22px 20px 24px;
+  &__item {
+    @extend %font--gamma;
+    position:   relative;
+    z-index:    2;
+    padding:    15px 17px;
+    border:     3px solid #e1e1e1;
+    cursor:     pointer;
+    transition: border-color .15s;
+    &:nth-of-type(odd) {
+      border-color: #ebebeb;
+      background:   #ebebeb;
+    }
+    &:hover {
+      border-color: #ff7200;
+      background:   #ebebeb;
+    }
+    &--paid-up {
+      &:before {
+        @extend %pseudoBeforeAfter;
+        top:        -3px;
+        bottom:     -3px;
+        left:       -3px;
+        width:      10px;
+        background: #ff7200;
+      }
+    }
+    &--hot {
+    }
+    &.opened {
+      border-color: #ffc64b !important;
+      background:   #f4f4f4 !important;
+      cursor:       default;
+    }
+  }
+
+  &__title {
+    position:     relative;
+    z-index:      2;
+    display:      inline-block;
+    margin-right: 160px;
+    font-size:    2rem;
+    line-height:  2.4rem;
+    .opened & {
+      text-decoration: underline;
+    }
+    .proj-l__item--hot & {
+      &:before {
+        @extend %pseudoBeforeAfter;
+        right:             -30px;
+        left:              auto;
+        width:             16px;
+        height:            24px;
+        background-image:  url("../images/sprite/ico__flame.png");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__price {
+    position:    absolute;
+    top:         15px;
+    right:       17px;
+    z-index:     2;
+    clear:       both;
+    overflow:    hidden;
+    color:       #000;
+    font-weight: bold;
+    font-size:   1.8rem;
+    line-height: 2.4rem;
+    .opened & {
+      color: #d38f00;
+    }
+    &-value {
+      display: block;
+      float:   left;
+    }
+    &-currency {
+      display:     block;
+      float:       left;
+      margin-left: 4px;
+    }
+  }
+
+  &__content {
+    display: none;
+    .opened & {
+      display: block;
+    }
+  }
+
+  &__links {
+    @extend %mlp;
+    clear:       both;
+    overflow:    hidden;
+    margin:      8px 160px 0 0;
+    font-size:   1.2rem;
+    line-height: 1.6rem;
+  }
+
+  &__links-item {
+    position: relative;
+    z-index:  2;
+    float:    left;
+    & + & {
+      margin-left: 16px;
+      &:before {
+        @extend %pseudoBeforeAfter;
+        left:    -9px;
+        color:   #a8a8a8;
+        content: "|";
+      }
+    }
+  }
+
+  &__links-link {
+    @extend %tduhn;
+    color: #a8a8a8;
+    &:hover {
+      color: #a8a8a8;
+    }
+  }
+
+  &__text {
+    padding-top: 7px;
+    color:       #424242;
+    font-size:   1.4rem;
+    line-height: 2rem;
+  }
+
+  &__row {
+    clear:       both;
+    overflow:    hidden;
+    padding-top: 10px;
+    font-size:   1.4rem;
+    line-height: 1.6rem;
+  }
+
+  &__row-item {
+    position:     relative;
+    z-index:      2;
+    display:      block;
+    float:        left;
+    margin-right: 10px;
+    &--pro {
+      padding-right: 34px;
+      color:         #616161;
+    }
+    &--user {
+    }
+    &--time {
+      color: #909090;
+    }
+    &--comment {
+      float:        right;
+      margin-right: 0;
+    }
+  }
+
+  &__ico {
+    display: inline-block;
+    .proj-l__row-item--pro & {
+      position:          absolute;
+      top:               0;
+      right:             0;
+      z-index:           2;
+      width:             30px;
+      height:            16px;
+      background-image:  url("../images/sprite/ico__pro.png");
+      background-repeat: no-repeat;
+    }
+    &--comment {
+      width:             15px;
+      height:            13px;
+      background-image:  url("../images/sprite/ico__comment.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__time-sub {
+    position:    relative;
+    z-index:     2;
+    display:     inline-block;
+    margin-left: 18px;
+    &:before {
+      @extend %pseudoBeforeAfter;
+      top:        2px;
+      bottom:     2px;
+      left:       -10px;
+      width:      1px;
+      background: #909090;
+    }
+  }
+
+  &__link {
+    @extend %tduhn;
+    position: relative;
+    z-index:  2;
+    display:  block;
+    float:    left;
+    .proj-l__row-item--user & {
+      padding-left: 14px;
+      &:before {
+        @extend %pseudoBeforeAfter;
+        top:               1px;
+        width:             10px;
+        height:            14px;
+        background-image:  url("../images/sprite/ico__user-2.png");
+        background-repeat: no-repeat;
+      }
+    }
+    .proj-l__row-item--comment & {
+      margin-right: 4px;
+      padding-left: 19px;
+      &:before {
+        @extend %pseudoBeforeAfter;
+        top:               2px;
+        width:             15px;
+        height:            13px;
+        background-image:  url("../images/sprite/ico__comment.png");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__respond {
+
+  }
+
+}
+
+/* END $proj-l */

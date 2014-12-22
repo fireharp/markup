@@ -71,6 +71,7 @@
   }
   &__buy-place {
     @extend %font--gamma;
+    @extend %tduhn;
     position:  absolute;
     right:     35px;
     bottom:    -16px;

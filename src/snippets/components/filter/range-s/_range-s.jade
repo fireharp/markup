@@ -1,0 +1,16 @@
+// BEGIN $range-s
+.range-s
+  .range-s__row
+    span.range-s__text Бюджет: от
+    span.range-s__text
+      span.range-s__text-value 1 000
+      span.range-s__text-currency руб
+    span.range-s__text до
+    span.range-s__text
+      span.range-s__text-value 35 000
+      span.range-s__text-currency руб
+    .form-group
+      label.control-label(for='nonbudget') В том числе проекты с неуказанным бюджетом
+      input#nonbudget.form-control(type='text', placeholder='', name='nonbudget')
+  #range-s__slider.range-s__slider(min='0', max='100000') slider
+// END $range-s

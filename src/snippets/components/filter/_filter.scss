@@ -1,0 +1,144 @@
+/*------------------------------------*\
+  BEGIN $filter
+\*------------------------------------*/
+.filter {
+
+}
+
+.filter__list {
+  @extend %mlp;
+  @extend %font--alpha;
+  clear:            both;
+  overflow:         hidden;
+  padding:          0 20px;
+  background-color: #e1e1e1;
+  font-size:        1.6rem;
+  line-height:      2rem;
+  &-item {
+    float:   left;
+    padding: 16px 18px 16px 0;
+    &--right {
+      float:         right;
+      padding-right: 0;
+    }
+  }
+  &-link {
+    @extend %tdn;
+    color: #ff7200 !important;
+    .filter__list-item--active & {
+      color:  #303131 !important;
+      cursor: default;
+    }
+  }
+}
+
+.filter__btn {
+  padding:    0;
+  border:     none;
+  background: none;
+  color:      #0da8d5;
+}
+
+.filter__form {
+  padding:          24px 40px;
+  border-bottom:    5px solid #d6d6d6;
+  background-color: #f4f4f4;
+}
+
+.filter__row {
+  &--specialization {
+
+  }
+}
+
+$ct-col: 960;
+.filter__col {
+  float: left;
+  &--1 {
+    width: perc(400, $ct-col);
+  }
+  &--2 {
+    width: perc(310, $ct-col);
+  }
+  &--3 {
+    width: perc(250, $ct-col);
+  }
+}
+
+.filter__text {
+  display: block;
+  float:   left;
+}
+
+.filter__fw-list {
+  @extend %mlp;
+  clear:           both;
+  overflow:        hidden;
+  padding:         20px 0;
+  width:           100%;
+  list-style:      none;
+  text-align:      justify;
+  text-align-last: justify;
+  text-justify:    newspaper;
+  font-size:       1px;
+  line-height:     0;
+  &:after {
+    display:    inline-block !important;
+    visibility: hidden;
+    overflow:   hidden;
+    width:      100%;
+    height:     0;
+    content:    "";
+  }
+  &-item {
+    display:        inline-block !important;
+    color:          #4a4a4a;
+    vertical-align: top;
+    text-align:     left;
+    font-size:      1.4rem;
+    line-height:    1.6rem;
+  }
+  .form-control {
+    margin-top:   1px;
+    margin-right: 4px;
+    width:        16px;
+    height:       16px;
+    outline:      none;
+  }
+  .form-control, .control-label {
+    display: block;
+    float:   left;
+  }
+  &-mq {
+    display: none;
+    @include bp(screen-beta) {
+      display:       block;
+      float:         left;
+      padding-right: 4px;
+    }
+  }
+}
+
+.filter__ico-pro {
+  display:           block;
+  float:             left;
+  width:             30px;
+  height:            16px;
+  background-image:  url("../images/sprite/ico__pro.png");
+  background-repeat: no-repeat;
+}
+
+.filter__ico-verifed {
+  display:           block;
+  float:             left;
+  width:             16px;
+  height:            16px;
+  background-image:  url("../images/sprite/ico__verifed.png");
+  background-repeat: no-repeat;
+}
+
+.filter__submit {
+
+}
+
+/* END $filter */

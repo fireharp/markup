@@ -25,9 +25,10 @@
 
 .nav__link {
   @extend %tdn;
-  position: relative;
-  z-index:  2;
-  color:    #c5c5c5;
+  position:   relative;
+  z-index:    2;
+  color:      #c5c5c5;
+  transition: color 0;
   &:hover {
     color: #fff;
   }
@@ -48,7 +49,7 @@
     background-image:  url("../images/sprite/ico__humanities.png");
     background-repeat: no-repeat;
     .nav__link:hover &, .opened & {
-      background-image:  url("../images/sprite/ico__humanities--white.png");
+      background-image: url("../images/sprite/ico__humanities--white.png");
     }
   }
   &--natural {
@@ -58,7 +59,7 @@
     background-image:  url("../images/sprite/ico__natural.png");
     background-repeat: no-repeat;
     .nav__link:hover &, .opened & {
-      background-image:url("../images/sprite/ico__natural--white.png");
+      background-image: url("../images/sprite/ico__natural--white.png");
     }
   }
   &--technic {
@@ -68,7 +69,7 @@
     background-image:  url("../images/sprite/ico__technic.png");
     background-repeat: no-repeat;
     .nav__link:hover &, .opened & {
-      background-image:url("../images/sprite/ico__technic--white.png");
+      background-image: url("../images/sprite/ico__technic--white.png");
     }
   }
   &--social {
@@ -78,7 +79,7 @@
     background-image:  url("../images/sprite/ico__social.png");
     background-repeat: no-repeat;
     .nav__link:hover &, .opened & {
-      background-image:url("../images/sprite/ico__social--white.png");
+      background-image: url("../images/sprite/ico__social--white.png");
     }
   }
   &--applied {
@@ -88,7 +89,7 @@
     background-image:  url("../images/sprite/ico__applied.png");
     background-repeat: no-repeat;
     .nav__link:hover &, .opened & {
-      background-image:url("../images/sprite/ico__applied--white.png");
+      background-image: url("../images/sprite/ico__applied--white.png");
     }
   }
   &--other {
@@ -98,7 +99,7 @@
     background-image:  url("../images/sprite/ico__other.png");
     background-repeat: no-repeat;
     .nav__link:hover &, .opened & {
-      background-image:url("../images/sprite/ico__other--white.png");
+      background-image: url("../images/sprite/ico__other--white.png");
     }
   }
 }

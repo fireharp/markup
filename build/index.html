@@ -159,18 +159,20 @@
     </aside>
     <!-- END $sidebar-->
     <!-- BEGIN $main-->
-    <main init-block="_temp.scss" class="main">
+    <main class="main">
       <!-- BEGIN $header-->
-      <div init-block="_temp.scss" class="header cf"><a href="index.html" class="header__btn"><i class="ico ico__notice"></i><span class="header__btn-text">События</span><span class="header__btn-counter">5</span></a><a href="index.html" class="header__btn"><i class="ico ico__list"></i><span class="header__btn-text">Мои заказы</span></a>
-        <a href="index.html" title="Статистика" class="header__btn header__btn--notext"><i class="ico ico__stats"></i>
+      <div class="header cf"><a href="index.html" class="header__btn"><i class="ico ico__notice"></i><span class="header__btn-text">События</span><span class="header__btn-counter">5</span></a><a href="index.html" class="header__btn"><i class="ico ico__list"></i><span class="header__btn-text">Мои заказы</span></a>
+        <a
+        href="index.html" title="Статистика" class="header__btn header__btn--notext"><i class="ico ico__stats"></i>
           </a>
-        <div class="header__btn-row"><a href="index.html" title="Корзина" class="header__btn header__btn--notext"><i class="ico ico__cart"></i></a><a href="index.html" class="header__btn"><i class="ico ico__rub"></i><span class="header__btn-text">52</span></a><a href="index.html"
-          class="header__btn"><span class="header__btn-text">Купить PRO</span></a>
-        </div>
-        <div class="header__btn-row header__btn-row--right"><a href="index.html" class="header__btn"><i class="ico ico__user"></i><span class="header__btn-text header__btn-text--lsh">Simpleusername</span></a><a href="index.html" title="Настройки" class="header__btn header__btn--notext"><i class="ico ico__gear"></i></a>
-          <a href="index.html" title="Выход" class="header__btn header__btn--notext"><i class="ico ico__exit"></i>
+          <div class="header__btn-row"><a href="index.html" title="Корзина" class="header__btn header__btn--notext"><i class="ico ico__cart"></i></a><a href="index.html" class="header__btn"><i class="ico ico__rub"></i><span class="header__btn-text">52</span></a><a href="index.html"
+            class="header__btn"><span class="header__btn-text">Купить PRO</span></a>
+          </div>
+          <div class="header__btn-row header__btn-row--right"><a href="index.html" class="header__btn"><i class="ico ico__user"></i><span class="header__btn-text header__btn-text--lsh">Simpleusername</span></a><a href="index.html" title="Настройки" class="header__btn header__btn--notext"><i class="ico ico__gear"></i></a>
+            <a
+            href="index.html" title="Выход" class="header__btn header__btn--notext"><i class="ico ico__exit"></i>
               </a>
-        </div>
+          </div>
       </div>
       <!-- END $header-->
       <!-- BEGIN $carousel-->
@@ -246,10 +248,345 @@
         </div>
       </div>
       <!-- END $promo-->
+      <!-- BEGIN $filter-->
+      <div class="filter cf">
+        <ul class="filter__list">
+          <li class="filter__list-item filter__list-item--active"><a href="index.html" class="filter__list-link">Все проекты</a>
+          </li>
+          <li class="filter__list-item"><a href="index.html" class="filter__list-link">Только для PRO</a>
+          </li>
+          <li class="filter__list-item"><a href="index.html" class="filter__list-link">Пользователи</a>
+          </li>
+          <li class="filter__list-item"><a href="index.html" class="filter__list-link">Магазин</a>
+          </li>
+          <li class="filter__list-item"><a href="index.html" class="filter__list-link">Блоги</a>
+          </li>
+          <li class="filter__list-item filter__list-item--right">
+            <button type="button" class="filter__btn">Фильтр</button>
+          </li>
+        </ul>
+        <form id="filter" action="index.html" method="post" name="filter" init-block="_temp.scss" class="filter__form cf">
+          <!-- BEGIN $range-s-->
+          <div class="range-s">
+            <div class="range-s__row"><span class="range-s__text">Бюджет: от</span><span class="range-s__text"><span class="range-s__text-value">1 000</span><span class="range-s__text-currency">руб</span></span><span class="range-s__text">до</span><span class="range-s__text"><span class="range-s__text-value">35 000</span>
+              <span
+              class="range-s__text-currency">руб</span>
+                </span>
+                <div class="form-group">
+                  <label for="nonbudget" class="control-label">В том числе проекты с неуказанным бюджетом</label>
+                  <input id="nonbudget" type="text" placeholder="" name="nonbudget" class="form-control">
+                </div>
+            </div>
+            <div id="range-s__slider" min="0" max="100000" class="range-s__slider">slider</div>
+          </div>
+          <!-- END $range-s-->
+          <div class="filter__row">
+            <div class="filter__col filter__col--1"><span class="filter__text">Дата публикации от:</span>
+              <div class="datepicker">date label</div><span class="filter__text">до:</span>
+              <div class="datepicker">date label</div>
+            </div>
+            <div class="filter__col filter__col--2">
+              <label for="min-days" class="control-label">Срок сдачи (в днях) от:</label>
+              <input id="min-days" type="text" placeholder="1" name="min-days" class="form-control">
+              <label for="max-days" class="control-label">до:</label>
+              <input id="min-days" type="text" placeholder="365" name="max-days" class="form-control">
+            </div>
+            <div class="filter__col filter__col--3">
+              <select id="type-job" name="type-job" class="form-control">
+                <option value="Тип работы">Тип работы</option>
+                <option value="По найму">По найму</option>
+                <option value="Удалённо">Удалённо</option>
+              </select>
+            </div>
+          </div>
+          <ul class="filter__fw-list">
+            <li class="filter__fw-list-item">
+              <input id="only-myspec" type="checkbox" name="only-myspec" class="form-control">
+              <label for="only-myspec" class="control-label"><span class="filter__fw-list-mq">Только</span>мои специализации</label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="only-hot" type="checkbox" name="only-hot" class="form-control">
+              <label for="only-hot" class="control-label"><span class="filter__fw-list-mq">Только</span>срочные заказы</label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="only-pro" type="checkbox" name="only-pro" class="form-control">
+              <label for="only-pro" class="control-label"><span class="filter__fw-list-mq">Только для</span><span title="Только для PRO" class="filter__ico-pro"></span>
+              </label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="only-verifed" type="checkbox" name="only-verifed" class="form-control">
+              <label for="only-verifed" class="control-label"><span class="filter__fw-list-mq">Только для верифицированных</span><span title="Только для верифицированных" class="filter__ico-verifed"></span>
+              </label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="verifed" type="checkbox" name="verifed" class="form-control">
+              <label for="verifed" class="control-label">
+                < 2 ответов в заказе</label>
+            </li>
+          </ul>
+          <div class="filter__row filter__row--specialization">
+            <select id="specialization" name="specialization" class="form-control">
+              <option value="Выберите специализацию">Выберите специализацию</option>
+              <option value="Естественные науки:">Естественные науки:</option>
+            </select>
+            <button type="button" class="btn">Добавить</button>
+            <button type="button" class="btn specialization-tag">География</button>
+            <button type="button" class="btn specialization-tag">Геология</button>
+            <button type="button" class="btn specialization-tag">Материаловедение</button>
+            <button type="button" class="btn specialization-tag">Минералогия</button>
+            <button id="filter__submit" type="button" class="btn filter__submit">Найти заказы</button>
+          </div>
+        </form>
+      </div>
+      <!-- END $filter-->
+      <!-- BEGIN $proj-l-->
+      <div class="proj-l">
+        <div class="proj-l__item proj-l__item--paid-up"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item opened"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item proj-l__item--paid-up proj-l__item--hot opened"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-l__item opened"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+          </div>
+          <div class="proj-l__content">
+            <ul class="proj-l__links">
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Минералогия</a>
+              </li>
+              <li class="proj-l__links-item"><a href="index.html" class="proj-l__links-link">Реферат</a>
+              </li>
+            </ul>
+            <div class="proj-l__text">В рамках концепции Акоффа и Стэка, комплексный анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса. Спонсорство раскручивает бюджет на размещение, учитывая результат предыдущих
+              медиа-кампаний. Изменение глобальной стратегии конструктивно. Контекстная реклама все еще интересна для многих. Отраслевой стандарт деятельно оправдывает бренд, полагаясь на инсайдерскую информацию. В рамках концепции Акоффа и Стэка, комплексный
+              анализ ситуации разнородно искажает культурный анализ зарубежного опыта, осознавая социальную ответственность бизнеса.</div>
+            <div class="proj-l__row"><span class="proj-l__row-item proj-l__row-item--pro">Только для<a href="index.html" title="Купить PRO" class="proj-l__ico"></a></span>
+              <time class="proj-l__row-item proj-l__row-item--time">12.09.2012<span class="proj-l__time-sub">2 часа назад</span>
+              </time><span class="proj-l__row-item proj-l__row-item--user"><a href="index.html" class="proj-l__link">Тимофей Нигматуллин</a></span><span class="proj-l__row-item proj-l__row-item--comment"><a href="index.html" class="proj-l__link">Ответить на заказ</a><span class="proj-l__respond">(4)</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END $proj-l-->
+      <!-- BEGIN $pagination-->
+      <div class="pagination">
+        <div class="pagination__title">Страницы:</div>
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a href="index.html" class="pagination__arrow pagination__arrow--left"></a>
+          </li>
+          <li class="pagination__item pagination__item--current"><a href="index.html" class="pagination__link">1</a>
+          </li>
+          <li class="pagination__item"><a href="index.html" class="pagination__link">2</a>
+          </li>
+          <li class="pagination__item"><a href="index.html" class="pagination__link">3</a>
+          </li>
+          <li class="pagination__item"><a href="index.html" class="pagination__link">4</a>
+          </li>
+          <li class="pagination__item"><a href="index.html" class="pagination__link">5</a>
+          </li>
+          <li class="pagination__item"><a href="index.html" class="pagination__link">6</a>
+          </li>
+          <li class="pagination__item"><a href="index.html" class="pagination__link">7</a>
+          </li>
+          <li class="pagination__item"><a href="index.html" class="pagination__link">8</a>
+          </li>
+          <li class="pagination__item"><a href="index.html" class="pagination__link">9</a>
+          </li>
+          <li class="pagination__item">
+            <a href="index.html" class="pagination__arrow pagination__arrow--right"></a>
+          </li>
+        </ul>
+      </div>
+      <!-- END $pagination-->
     </main>
     <!-- END $main-->
     <!-- BEGIN $footer-->
-    <footer init-block="_temp.scss" class="footer cf">
+    <footer class="footer cf">
       <ul class="footer__links">
         <li class="footer__links-item"><a href="index.html" class="footer__links-link">Реклама на сайте</a>
         </li>

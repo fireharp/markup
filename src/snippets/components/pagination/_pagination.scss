@@ -1,0 +1,89 @@
+/*------------------------------------*\
+  BEGIN $pagination
+\*------------------------------------*/
+.pagination {
+  @extend %font--gamma;
+  clear:       both;
+  overflow:    hidden;
+  padding:     0 40px 14px;
+  font-weight: bold;
+  font-size:   1.6rem;
+  line-height: 1;
+  &__title {
+    display:       block;
+    float:         left;
+    padding-right: 6px;
+    color:         #2c2c2c;
+    font-size:     1.4rem;
+    line-height:   2.8rem;
+  }
+
+  &__list {
+    @extend %mlp;
+    float:    left;
+    overflow: hidden;
+  }
+
+  &__item {
+    float: left;
+  }
+
+  &__arrow {
+    position: relative;
+    z-index:  2;
+    display:  block;
+    width:    25px;
+    height:   28px;
+    &:before {
+      @extend %pseudoBeforeAfter;
+      top:    8px;
+      left:   8px;
+      width:  7px;
+      height: 13px;
+    }
+    &--left {
+      &:before {
+        background-image:  url("../images/sprite/ico__arrow-blue-left.png");
+        background-repeat: no-repeat;
+      }
+    }
+    &--right {
+      &:before {
+        left:              10px;
+        background-image:  url("../images/sprite/ico__arrow-blue-right.png");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__link {
+    @extend %tdn;
+    position: relative;
+    z-index:  2;
+    display:  block;
+    padding:  5px 8px 0 7px;
+    height:   28px;
+    border:   2px solid transparent;
+    .pagination__item--current & {
+      border-color:  #aaa;
+      border-radius: 3px;
+      color:         #000 !important;
+      &:before {
+        display:       none;
+        padding-right: 7px;
+      }
+    }
+    &:before {
+      @extend %pseudoBeforeAfter;
+      top:        1px;
+      right:      -2px;
+      bottom:     1px;
+      left:       auto;
+      width:      1px;
+      background: #c4c4c4;
+    }
+  }
+
+}
+
+/* END $pagination */

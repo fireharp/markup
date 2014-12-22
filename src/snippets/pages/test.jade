@@ -1,0 +1,48 @@
+- var pagename = 'test'
+- var link = pagename + '.html'
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title= pagename
+    style.
+      /*menu*/
+      .menu {
+        clear:                 both;
+        overflow:              hidden;
+        margin-bottom:         20px;
+        width:                 100%;
+        height:                53px;
+        background:            #e5e5e5;
+        text-align:            justify;
+        text-align-last:       justify;
+        text-justify:          newspaper;
+        font-size:             1px;
+        line-height:           0;
+      }
+
+      .page-main .menu {
+        margin-bottom: 0;
+      }
+
+      .menu:after {
+        display:    inline-block;
+        visibility: hidden;
+        overflow:   hidden;
+        width:      100%;
+        height:     0;
+        content:    "";
+      }
+
+      .menu__item {
+        display:         inline-block;
+        padding:         0 25px;
+        color:           #000;
+        vertical-align:  top;
+        text-align:      left;
+        text-decoration: none;
+        font-size:       16px;
+        line-height:     53px;
+      }
+  body
+    <nav class="menu"><a class="menu__item" href="">Главная</a><a class="menu__item" href="">Обращения</a><a class="menu__item" href="">Заявки</a><a class="menu__item" href="">Центр загрузки</a><a class="menu__item" href="">База знаний</a><a class="menu__item" href="">Новости</a><a class="menu__item" href="">Конакты</a></nav>

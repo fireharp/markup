@@ -91,7 +91,7 @@ input:focus:-ms-input-placeholder {
 }
 
 /* line 1, ../../src/snippets/globals/_helpers.scss */
-.header__btn, .carousel, .sidebar, .sidebar .btn, .search-proj .form-control {
+.header__btn, .carousel, .filter__list, .sidebar, .sidebar .btn, .search-proj .form-control {
   font-weight: 700;
   font-style: normal;
   font-family: "HelveticaNeue Bold", Arial, Helvetica, sans-serif;
@@ -105,7 +105,7 @@ input:focus:-ms-input-placeholder {
 }
 
 /* line 13, ../../src/snippets/globals/_helpers.scss */
-.carousel__buy-place {
+.carousel__buy-place, .proj-l__item, .pagination {
   font-weight: 400;
   font-style: normal;
   font-family: Arial, Helvetica, sans-serif;
@@ -122,32 +122,41 @@ input:focus:-ms-input-placeholder {
 }
 
 /* line 36, ../../src/snippets/globals/_helpers.scss */
-a {
+.carousel__buy-place, .proj-l__links-link, .proj-l__link, .footer__links-link {
   text-decoration: underline;
 }
 /* line 38, ../../src/snippets/globals/_helpers.scss */
-a:hover {
+.carousel__buy-place:hover, .proj-l__links-link:hover, .proj-l__link:hover, .footer__links-link:hover {
   text-decoration: none;
 }
 
 /* line 43, ../../src/snippets/globals/_helpers.scss */
-.header__btn, .services__name, .carousel__name, .nav__link, .nav__link-2, .nav__link-3 {
+.header__btn, .filter__list-link, .pagination__link, .services__name, .carousel__name, .nav__link, .nav__link-2, .nav__link-3 {
   text-decoration: none;
 }
 /* line 45, ../../src/snippets/globals/_helpers.scss */
-.header__btn:hover, .services__name:hover, .carousel__name:hover, .nav__link:hover, .nav__link-2:hover, .nav__link-3:hover {
+.header__btn:hover, .filter__list-link:hover, .pagination__link:hover, .services__name:hover, .carousel__name:hover, .nav__link:hover, .nav__link-2:hover, .nav__link-3:hover {
   text-decoration: none;
 }
 
+/* line 50, ../../src/snippets/globals/_helpers.scss */
+a {
+  text-decoration: none;
+}
+/* line 52, ../../src/snippets/globals/_helpers.scss */
+a:hover {
+  text-decoration: underline;
+}
+
 /* line 57, ../../src/snippets/globals/_helpers.scss */
-.services, .soc-list, .nav__list, .nav__list-2, .nav__list-3, .footer__links {
+.filter__list, .filter__fw-list, .proj-l__links, .pagination__list, .services, .soc-list, .nav__list, .nav__list-2, .nav__list-3, .footer__links {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 /* line 63, ../../src/snippets/globals/_helpers.scss */
-.page-wrapper:before, .carousel:before, .services__item:last-child .services__ava:before, .services__item:last-child .carousel__ava:before, .nav__link-2:before {
+.page-wrapper:before, .carousel:before, .proj-l__item--paid-up:before, .proj-l__item--hot .proj-l__title:before, .proj-l__links-item + .proj-l__links-item:before, .proj-l__time-sub:before, .proj-l__row-item--user .proj-l__link:before, .proj-l__row-item--comment .proj-l__link:before, .pagination__arrow:before, .pagination__link:before, .services__item:last-child .services__ava:before, .services__item:last-child .carousel__ava:before, .nav__link-2:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -185,7 +194,7 @@ a:hover {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  padding-bottom: 150px;
+  padding-bottom: 170px;
   background: #e1e1e1;
 }
 
@@ -505,6 +514,477 @@ a:hover {
 }
 
 /* END $promo */
+/**/
+/*------------------------------------*\
+  BEGIN $filter
+\*------------------------------------*/
+/* line 8, ../../src/snippets/components/filter/_filter.scss */
+.filter__list {
+  clear: both;
+  overflow: hidden;
+  padding: 0 20px;
+  background-color: #e1e1e1;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+/* line 17, ../../src/snippets/components/filter/_filter.scss */
+.filter__list-item {
+  float: left;
+  padding: 16px 18px 16px 0;
+}
+/* line 20, ../../src/snippets/components/filter/_filter.scss */
+.filter__list-item--right {
+  float: right;
+  padding-right: 0;
+}
+/* line 25, ../../src/snippets/components/filter/_filter.scss */
+.filter__list-link {
+  color: #ff7200 !important;
+}
+/* line 28, ../../src/snippets/components/filter/_filter.scss */
+.filter__list-item--active .filter__list-link {
+  color: #303131 !important;
+  cursor: default;
+}
+
+/* line 35, ../../src/snippets/components/filter/_filter.scss */
+.filter__btn {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #0da8d5;
+}
+
+/* line 42, ../../src/snippets/components/filter/_filter.scss */
+.filter__form {
+  padding: 24px 40px;
+  border-bottom: 5px solid #d6d6d6;
+  background-color: #f4f4f4;
+}
+
+/* line 55, ../../src/snippets/components/filter/_filter.scss */
+.filter__col {
+  float: left;
+}
+/* line 57, ../../src/snippets/components/filter/_filter.scss */
+.filter__col--1 {
+  width: 41.66667%;
+}
+/* line 60, ../../src/snippets/components/filter/_filter.scss */
+.filter__col--2 {
+  width: 32.29167%;
+}
+/* line 63, ../../src/snippets/components/filter/_filter.scss */
+.filter__col--3 {
+  width: 26.04167%;
+}
+
+/* line 68, ../../src/snippets/components/filter/_filter.scss */
+.filter__text {
+  display: block;
+  float: left;
+}
+
+/* line 73, ../../src/snippets/components/filter/_filter.scss */
+.filter__fw-list {
+  clear: both;
+  overflow: hidden;
+  padding: 20px 0;
+  width: 100%;
+  list-style: none;
+  text-align: justify;
+  text-align-last: justify;
+  text-justify: newspaper;
+  font-size: 1px;
+  line-height: 0;
+}
+/* line 85, ../../src/snippets/components/filter/_filter.scss */
+.filter__fw-list:after {
+  display: inline-block !important;
+  visibility: hidden;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  content: "";
+}
+/* line 93, ../../src/snippets/components/filter/_filter.scss */
+.filter__fw-list-item {
+  display: inline-block !important;
+  color: #4a4a4a;
+  vertical-align: top;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+/* line 101, ../../src/snippets/components/filter/_filter.scss */
+.filter__fw-list .form-control {
+  margin-top: 1px;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  outline: none;
+}
+/* line 108, ../../src/snippets/components/filter/_filter.scss */
+.filter__fw-list .form-control, .filter__fw-list .control-label {
+  display: block;
+  float: left;
+}
+/* line 112, ../../src/snippets/components/filter/_filter.scss */
+.filter__fw-list-mq {
+  display: none;
+}
+
+/* line 122, ../../src/snippets/components/filter/_filter.scss */
+.filter__ico-pro {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 16px;
+  background-image: url("../images/sprite/ico__pro.png");
+  background-repeat: no-repeat;
+}
+
+/* line 131, ../../src/snippets/components/filter/_filter.scss */
+.filter__ico-verifed {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/sprite/ico__verifed.png");
+  background-repeat: no-repeat;
+}
+
+/* END $filter */
+/**/
+/*------------------------------------*\
+  BEGIN $proj-l
+\*------------------------------------*/
+/* line 4, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l {
+  padding: 22px 20px 24px;
+}
+/* line 6, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__item {
+  position: relative;
+  z-index: 2;
+  padding: 15px 17px;
+  border: 3px solid #e1e1e1;
+  cursor: pointer;
+  -webkit-transition: border-color .15s;
+  -o-transition: border-color .15s;
+  transition: border-color .15s;
+}
+/* line 14, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__item:nth-of-type(odd) {
+  border-color: #ebebeb;
+  background: #ebebeb;
+}
+/* line 18, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__item:hover {
+  border-color: #ff7200;
+  background: #ebebeb;
+}
+/* line 23, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__item--paid-up:before {
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  width: 10px;
+  background: #ff7200;
+}
+/* line 34, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__item.opened {
+  border-color: #ffc64b !important;
+  background: #f4f4f4 !important;
+  cursor: default;
+}
+/* line 41, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__title {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-right: 160px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+/* line 48, ../../src/snippets/components/proj-l/_proj-l.scss */
+.opened .proj-l__title {
+  text-decoration: underline;
+}
+/* line 52, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__item--hot .proj-l__title:before {
+  right: -30px;
+  left: auto;
+  width: 16px;
+  height: 24px;
+  background-image: url("../images/sprite/ico__flame.png");
+  background-repeat: no-repeat;
+}
+/* line 64, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__price {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  z-index: 2;
+  clear: both;
+  overflow: hidden;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+/* line 75, ../../src/snippets/components/proj-l/_proj-l.scss */
+.opened .proj-l__price {
+  color: #d38f00;
+}
+/* line 78, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__price-value {
+  display: block;
+  float: left;
+}
+/* line 82, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__price-currency {
+  display: block;
+  float: left;
+  margin-left: 4px;
+}
+/* line 89, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__content {
+  display: none;
+}
+/* line 91, ../../src/snippets/components/proj-l/_proj-l.scss */
+.opened .proj-l__content {
+  display: block;
+}
+/* line 96, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__links {
+  clear: both;
+  overflow: hidden;
+  margin: 8px 160px 0 0;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+/* line 105, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__links-item {
+  position: relative;
+  z-index: 2;
+  float: left;
+}
+/* line 109, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__links-item + .proj-l__links-item {
+  margin-left: 16px;
+}
+/* line 111, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__links-item + .proj-l__links-item:before {
+  left: -9px;
+  color: #a8a8a8;
+  content: "|";
+}
+/* line 120, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__links-link {
+  color: #a8a8a8;
+}
+/* line 123, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__links-link:hover {
+  color: #a8a8a8;
+}
+/* line 128, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__text {
+  padding-top: 7px;
+  color: #424242;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+/* line 135, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row {
+  clear: both;
+  overflow: hidden;
+  padding-top: 10px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+/* line 143, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item {
+  position: relative;
+  z-index: 2;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+/* line 149, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item--pro {
+  padding-right: 34px;
+  color: #616161;
+}
+/* line 155, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item--time {
+  color: #909090;
+}
+/* line 158, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item--comment {
+  float: right;
+  margin-right: 0;
+}
+/* line 164, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__ico {
+  display: inline-block;
+}
+/* line 166, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item--pro .proj-l__ico {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 30px;
+  height: 16px;
+  background-image: url("../images/sprite/ico__pro.png");
+  background-repeat: no-repeat;
+}
+/* line 176, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__ico--comment {
+  width: 15px;
+  height: 13px;
+  background-image: url("../images/sprite/ico__comment.png");
+  background-repeat: no-repeat;
+}
+/* line 184, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__time-sub {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-left: 18px;
+}
+/* line 189, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__time-sub:before {
+  top: 2px;
+  bottom: 2px;
+  left: -10px;
+  width: 1px;
+  background: #909090;
+}
+/* line 199, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__link {
+  position: relative;
+  z-index: 2;
+  display: block;
+  float: left;
+}
+/* line 205, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item--user .proj-l__link {
+  padding-left: 14px;
+}
+/* line 207, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item--user .proj-l__link:before {
+  top: 1px;
+  width: 10px;
+  height: 14px;
+  background-image: url("../images/sprite/ico__user-2.png");
+  background-repeat: no-repeat;
+}
+/* line 216, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item--comment .proj-l__link {
+  margin-right: 4px;
+  padding-left: 19px;
+}
+/* line 219, ../../src/snippets/components/proj-l/_proj-l.scss */
+.proj-l__row-item--comment .proj-l__link:before {
+  top: 2px;
+  width: 15px;
+  height: 13px;
+  background-image: url("../images/sprite/ico__comment.png");
+  background-repeat: no-repeat;
+}
+
+/* END $proj-l */
+/**/
+/*------------------------------------*\
+  BEGIN $pagination
+\*------------------------------------*/
+/* line 4, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination {
+  clear: both;
+  overflow: hidden;
+  padding: 0 40px 14px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+/* line 12, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__title {
+  display: block;
+  float: left;
+  padding-right: 6px;
+  color: #2c2c2c;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+/* line 21, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__list {
+  float: left;
+  overflow: hidden;
+}
+/* line 27, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__item {
+  float: left;
+}
+/* line 31, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__arrow {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 25px;
+  height: 28px;
+}
+/* line 37, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__arrow:before {
+  top: 8px;
+  left: 8px;
+  width: 7px;
+  height: 13px;
+}
+/* line 45, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__arrow--left:before {
+  background-image: url("../images/sprite/ico__arrow-blue-left.png");
+  background-repeat: no-repeat;
+}
+/* line 51, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__arrow--right:before {
+  left: 10px;
+  background-image: url("../images/sprite/ico__arrow-blue-right.png");
+  background-repeat: no-repeat;
+}
+/* line 59, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__link {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 5px 8px 0 7px;
+  height: 28px;
+  border: 2px solid transparent;
+}
+/* line 67, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__item--current .pagination__link {
+  border-color: #aaa;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #000 !important;
+}
+/* line 71, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__item--current .pagination__link:before {
+  display: none;
+  padding-right: 7px;
+}
+/* line 76, ../../src/snippets/components/pagination/_pagination.scss */
+.pagination__link:before {
+  top: 1px;
+  right: -2px;
+  bottom: 1px;
+  left: auto;
+  width: 1px;
+  background: #c4c4c4;
+}
+
+/* END $pagination */
 /**/
 /*------------------------------------*\
   BEGIN $sidebar
@@ -846,24 +1326,27 @@ a:hover {
   position: relative;
   z-index: 2;
   color: #c5c5c5;
+  -webkit-transition: color 0;
+  -o-transition: color 0;
+  transition: color 0;
 }
-/* line 31, ../../src/snippets/components/nav/_nav.scss */
+/* line 32, ../../src/snippets/components/nav/_nav.scss */
 .nav__link:hover {
   color: #fff;
 }
-/* line 34, ../../src/snippets/components/nav/_nav.scss */
+/* line 35, ../../src/snippets/components/nav/_nav.scss */
 .opened .nav__link {
   color: #fff;
 }
 
-/* line 39, ../../src/snippets/components/nav/_nav.scss */
+/* line 40, ../../src/snippets/components/nav/_nav.scss */
 .nav__ico {
   position: absolute;
   top: 50%;
   left: -30px;
   display: block;
 }
-/* line 44, ../../src/snippets/components/nav/_nav.scss */
+/* line 45, ../../src/snippets/components/nav/_nav.scss */
 .nav__ico--humanities {
   margin-top: -11.5px;
   width: 19px;
@@ -871,11 +1354,11 @@ a:hover {
   background-image: url("../images/sprite/ico__humanities.png");
   background-repeat: no-repeat;
 }
-/* line 50, ../../src/snippets/components/nav/_nav.scss */
+/* line 51, ../../src/snippets/components/nav/_nav.scss */
 .nav__link:hover .nav__ico--humanities, .opened .nav__ico--humanities {
   background-image: url("../images/sprite/ico__humanities--white.png");
 }
-/* line 54, ../../src/snippets/components/nav/_nav.scss */
+/* line 55, ../../src/snippets/components/nav/_nav.scss */
 .nav__ico--natural {
   margin-top: -11px;
   width: 22px;
@@ -883,11 +1366,11 @@ a:hover {
   background-image: url("../images/sprite/ico__natural.png");
   background-repeat: no-repeat;
 }
-/* line 60, ../../src/snippets/components/nav/_nav.scss */
+/* line 61, ../../src/snippets/components/nav/_nav.scss */
 .nav__link:hover .nav__ico--natural, .opened .nav__ico--natural {
   background-image: url("../images/sprite/ico__natural--white.png");
 }
-/* line 64, ../../src/snippets/components/nav/_nav.scss */
+/* line 65, ../../src/snippets/components/nav/_nav.scss */
 .nav__ico--technic {
   margin-top: -12.5px;
   width: 25px;
@@ -895,11 +1378,11 @@ a:hover {
   background-image: url("../images/sprite/ico__technic.png");
   background-repeat: no-repeat;
 }
-/* line 70, ../../src/snippets/components/nav/_nav.scss */
+/* line 71, ../../src/snippets/components/nav/_nav.scss */
 .nav__link:hover .nav__ico--technic, .opened .nav__ico--technic {
   background-image: url("../images/sprite/ico__technic--white.png");
 }
-/* line 74, ../../src/snippets/components/nav/_nav.scss */
+/* line 75, ../../src/snippets/components/nav/_nav.scss */
 .nav__ico--social {
   margin-top: -11px;
   width: 22px;
@@ -907,11 +1390,11 @@ a:hover {
   background-image: url("../images/sprite/ico__social.png");
   background-repeat: no-repeat;
 }
-/* line 80, ../../src/snippets/components/nav/_nav.scss */
+/* line 81, ../../src/snippets/components/nav/_nav.scss */
 .nav__link:hover .nav__ico--social, .opened .nav__ico--social {
   background-image: url("../images/sprite/ico__social--white.png");
 }
-/* line 84, ../../src/snippets/components/nav/_nav.scss */
+/* line 85, ../../src/snippets/components/nav/_nav.scss */
 .nav__ico--applied {
   margin-top: -11.5px;
   width: 18px;
@@ -919,11 +1402,11 @@ a:hover {
   background-image: url("../images/sprite/ico__applied.png");
   background-repeat: no-repeat;
 }
-/* line 90, ../../src/snippets/components/nav/_nav.scss */
+/* line 91, ../../src/snippets/components/nav/_nav.scss */
 .nav__link:hover .nav__ico--applied, .opened .nav__ico--applied {
   background-image: url("../images/sprite/ico__applied--white.png");
 }
-/* line 94, ../../src/snippets/components/nav/_nav.scss */
+/* line 95, ../../src/snippets/components/nav/_nav.scss */
 .nav__ico--other {
   margin-top: -11px;
   width: 22px;
@@ -931,32 +1414,32 @@ a:hover {
   background-image: url("../images/sprite/ico__other.png");
   background-repeat: no-repeat;
 }
-/* line 100, ../../src/snippets/components/nav/_nav.scss */
+/* line 101, ../../src/snippets/components/nav/_nav.scss */
 .nav__link:hover .nav__ico--other, .opened .nav__ico--other {
   background-image: url("../images/sprite/ico__other--white.png");
 }
 
-/* line 106, ../../src/snippets/components/nav/_nav.scss */
+/* line 107, ../../src/snippets/components/nav/_nav.scss */
 .nav__list-2 {
   padding: 8px 0 0;
 }
 
-/* line 111, ../../src/snippets/components/nav/_nav.scss */
+/* line 112, ../../src/snippets/components/nav/_nav.scss */
 .nav__item-2 {
   padding: 4px 0;
 }
 
-/* line 115, ../../src/snippets/components/nav/_nav.scss */
+/* line 116, ../../src/snippets/components/nav/_nav.scss */
 .nav__link-2 {
   position: relative;
   z-index: 2;
   color: #af7c5a;
 }
-/* line 120, ../../src/snippets/components/nav/_nav.scss */
+/* line 121, ../../src/snippets/components/nav/_nav.scss */
 .nav__link-2:hover {
   color: #af7c5a;
 }
-/* line 123, ../../src/snippets/components/nav/_nav.scss */
+/* line 124, ../../src/snippets/components/nav/_nav.scss */
 .nav__link-2:before {
   top: 50%;
   left: -25px;
@@ -968,33 +1451,33 @@ a:hover {
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
 }
-/* line 134, ../../src/snippets/components/nav/_nav.scss */
+/* line 135, ../../src/snippets/components/nav/_nav.scss */
 .nav__item-2.opened .nav__link-2:before {
   display: block;
 }
 
-/* line 140, ../../src/snippets/components/nav/_nav.scss */
+/* line 141, ../../src/snippets/components/nav/_nav.scss */
 .nav__counter {
   display: inline-block;
   margin-left: 5px;
   color: #5d5d5d;
 }
 
-/* line 147, ../../src/snippets/components/nav/_nav.scss */
+/* line 148, ../../src/snippets/components/nav/_nav.scss */
 .nav__list-3 {
   padding: 5px 0;
 }
 
-/* line 152, ../../src/snippets/components/nav/_nav.scss */
+/* line 153, ../../src/snippets/components/nav/_nav.scss */
 .nav__item-3 {
   padding: 5px 0;
 }
 
-/* line 156, ../../src/snippets/components/nav/_nav.scss */
+/* line 157, ../../src/snippets/components/nav/_nav.scss */
 .nav__link-3 {
   color: #ff7200;
 }
-/* line 159, ../../src/snippets/components/nav/_nav.scss */
+/* line 160, ../../src/snippets/components/nav/_nav.scss */
 .nav__link-3:hover {
   color: #ff7200;
 }
@@ -1023,14 +1506,14 @@ a:hover {
   padding-left: 40px;
   width: 26.31579%;
 }
-/* line 26, ../../src/snippets/sections/footer/_footer.scss */
+/* line 29, ../../src/snippets/sections/footer/_footer.scss */
 .footer__info {
   float: left;
   padding-left: 60px;
   width: 36.84211%;
   color: #8f8f8f;
 }
-/* line 31, ../../src/snippets/sections/footer/_footer.scss */
+/* line 34, ../../src/snippets/sections/footer/_footer.scss */
 .footer__info-b {
   display: inline-block;
   padding-left: 4px;
@@ -1048,6 +1531,12 @@ a:hover {
   /* line 49, ../../src/snippets/components/header/_header.scss */
   .header__btn-text--lsh {
     display: block;
+  }
+  /* line 112, ../../src/snippets/components/filter/_filter.scss */
+  .filter__fw-list-mq {
+    display: block;
+    float: left;
+    padding-right: 4px;
   }
   /* line 17, ../../src/snippets/sections/footer/_footer.scss */
   .footer__links {
