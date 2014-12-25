@@ -8,13 +8,20 @@
 @import "globals/helpers";
 @import "globals/grid";
 // Sections and Components (BEM > Blocks)
+@import "components/icos";
+@import "components/buttons";
 @import "sections/main/main";
+/**/@import "sections/sidebar/sidebar";
+/**//**/@import "components/nav/nav";
 /**/@import "components/header/header";
 /**/@import "components/carousel/carousel";
 /**/@import "components/promo/promo";
 /**/@import "components/filter/filter";
+/**//**/@import "components/filter/range-s/range-s";
 /**/@import "components/proj-l/proj-l";
 /**/@import "components/pagination/pagination";
-/**/@import "sections/sidebar/sidebar";
-/**//**/@import "components/nav/nav";
+/**/@import "components/profile/profile";
+/**/@import "components/profile/p-state/p-state";
+/**/@import "components/profile/p-user/p-user";
+/**/@import "components/proj-v/proj-v";
 @import "sections/footer/footer";

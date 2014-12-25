@@ -1,9 +1,13 @@
 // BEGIN $main
 main.main
   include ../../components/header/_header
-  include ../../components/carousel/_carousel
-  include ../../components/promo/_promo
-  include ../../components/filter/_filter
-  include ../../components/proj-l/_proj-l
-  include ../../components/pagination/_pagination
+  if pagename == 'index'
+    include ../../components/carousel/_carousel
+    include ../../components/promo/_promo
+    include ../../components/filter/_filter
+    include ../../components/proj-l/_proj-l
+    include ../../components/pagination/_pagination
+  if pagename == 'order'
+    include ../../components/profile/_profile
+    include ../../components/proj-v/_proj-v
 // END $main

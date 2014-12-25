@@ -2,7 +2,8 @@
   BEGIN $filter
 \*------------------------------------*/
 .filter {
-
+  margin-bottom: 22px;
+  border-bottom: 5px solid #d6d6d6;
 }
 
 .filter__list {
@@ -34,20 +35,128 @@
 
 .filter__btn {
   padding:    0;
+  outline:    none;
   border:     none;
-  background: none;
+  background: url('../images/datauri/dashed-blue-3x1.gif') repeat-x 0 bottom;
   color:      #0da8d5;
 }
 
+.filter__submit {
+  @extend %font--delta;
+  position: absolute;
+  top:      0;
+  right:    0;
+  z-index:  2;
+  outline:  none !important;
+}
+
 .filter__form {
+  position:         relative;
+  z-index:          2;
+  display:          none;
   padding:          24px 40px;
-  border-bottom:    5px solid #d6d6d6;
   background-color: #f4f4f4;
+  color:            #4a4a4a;
+  font-size:        1.4rem;
+  line-height:      2.6rem;
+  .opened & {
+    display: block;
+  }
+  &-arrow {
+    @extend %pseudoBeforeAfter;
+    top:           -11px;
+    right:         40px;
+    left:          auto;
+    border-right:  11px solid transparent;
+    border-bottom: 11px solid #f4f4f4;
+    border-left:   11px solid transparent;
+  }
 }
 
 .filter__row {
   &--specialization {
+    position: relative;
+    z-index:  2;
+    padding:  4px 134px 4px 0;
+    .form-control {
+      @extend %font--gamma;
+      display:          block;
+      float:            left;
+      margin-right:     10px;
+      padding:          0 8px;
+      width:            perc(260, 960);
+      height:           26px;
+      outline:          none;
+      border:           1px solid #d3d3d3;
+      background-color: #fff;
+      box-shadow:       inset 0 1px 8px rgba(18, 18, 18, 0.08);
+      color:            #505050;
+      font-size:        1.4rem;
+      line-height:      2.4rem;
+      @include placeholder {
+        color: #505050;
+      }
+    }
+  }
+}
 
+.filter__btn-add {
+  @extend %font--delta;
+  position:         relative;
+  z-index:          2;
+  display:          block;
+  float:            left;
+  margin-right:     15px;
+  margin-bottom:    12px;
+  padding:          0 8px 0 24px;
+  height:           2.6rem;
+  border:           1px solid #d1d1d1;
+  border-radius:    2px;
+  background-image: linear-gradient(to top, #ededed 0%, #fff 100%);
+  box-shadow:       0 2px 0 rgba(0, 0, 0, 0.06);
+  color:            #363636;
+  font-weight:      bold;
+  font-size:        1.4rem;
+  line-height:      2.4rem;
+  &:before {
+    @extend %pseudoBeforeAfter;
+    top:               7px;
+    left:              10px;
+    width:             10px;
+    height:            10px;
+    background-image:  url("../images/sprite/ico__plus.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.specialization-tag {
+  @extend %font--delta;
+  position:         relative;
+  z-index:          2;
+  display:          block;
+  float:            left;
+  margin-right:     8px;
+  margin-bottom:    12px;
+  padding:          0 24px 0 10px;
+  height:           2.6rem;
+  border:           none;
+  border-radius:    3px;
+  background-color: #e1e1e1;
+  color:            #363636;
+  font-size:        1.4rem;
+  line-height:      2.6rem;
+  &:hover {
+    background-color: darken(#e1e1e1, 5%);
+  }
+  &:before {
+    @extend %pseudoBeforeAfter;
+    top:               9px;
+    right:             8px;
+    left:              auto;
+    width:             9px;
+    height:            9px;
+    background-image:  url("../images/sprite/ico__close.png");
+    background-repeat: no-repeat;
   }
 }
 
@@ -55,19 +164,54 @@ $ct-col: 960;
 .filter__col {
   float: left;
   &--1 {
-    width: perc(400, $ct-col);
+    width: perc(420, $ct-col);
+    .form-control {
+      width: 100px;
+    }
   }
   &--2 {
-    width: perc(310, $ct-col);
+    width: perc(320, $ct-col);
+    .form-control {
+      margin: 0 6px 0 4px;
+      width:  42px;
+    }
   }
   &--3 {
-    width: perc(250, $ct-col);
+    width: perc(210, $ct-col);
+    .form-control {
+      width: 100%;
+    }
+  }
+  .form-group {
+    float:   left;
+    padding: 0 6px 0 4px;
+  }
+  .form-control {
+    @extend %font--gamma;
+    padding:          0 8px;
+    height:           26px;
+    outline:          none;
+    border:           1px solid #d3d3d3;
+    background-color: #fff;
+    box-shadow:       inset 0 1px 8px rgba(18, 18, 18, 0.08);
+    color:            #505050;
+    font-size:        1.4rem;
+    line-height:      2.4rem;
+    @include placeholder {
+      color: #505050;
+    }
   }
 }
 
 .filter__text {
   display: block;
   float:   left;
+  &-mq {
+    display: none;
+    @include bp(screen-beta) {
+      display: inline;
+    }
+  }
 }
 
 .filter__fw-list {
@@ -106,8 +250,10 @@ $ct-col: 960;
     outline:      none;
   }
   .form-control, .control-label {
-    display: block;
-    float:   left;
+    display:     block;
+    float:       left;
+    cursor:      pointer;
+    user-select: none;
   }
   &-mq {
     display: none;
@@ -119,22 +265,20 @@ $ct-col: 960;
   }
 }
 
+
+
 .filter__ico-pro {
-  display:           block;
-  float:             left;
-  width:             30px;
-  height:            16px;
-  background-image:  url("../images/sprite/ico__pro.png");
-  background-repeat: no-repeat;
+  @extend .ico__pro;
+  display: block;
+  float:   left;
 }
 
+
+
 .filter__ico-verifed {
+  @extend .ico__verifed;
   display:           block;
   float:             left;
-  width:             16px;
-  height:            16px;
-  background-image:  url("../images/sprite/ico__verifed.png");
-  background-repeat: no-repeat;
 }
 
 .filter__submit {

@@ -1,5 +1,5 @@
 // BEGIN $filter
-.filter.cf
+.filter.cf.opened
   ul.filter__list
     li.filter__list-item.filter__list-item--active: a.filter__list-link(href=link) Все проекты
     li.filter__list-item: a.filter__list-link(href=link) Только для PRO
@@ -7,16 +7,25 @@
     li.filter__list-item: a.filter__list-link(href=link) Магазин
     li.filter__list-item: a.filter__list-link(href=link) Блоги
     li.filter__list-item.filter__list-item--right: button.filter__btn(type='button') Фильтр
-  form#filter.filter__form.cf(action=link, method='post', name='filter', init-block='_temp.scss')
+  form#filter.filter__form.cf(action=link, method='post', name='filter')
+    span.filter__form-arrow
     include range-s/_range-s
     .filter__row
       .filter__col.filter__col--1
-        span.filter__text Дата публикации от:
-        .datepicker date label
+        span.filter__text Дата&nbsp;
+         span.filter__text-mq публикации&nbsp;
+         | от:
+        .form-group
+          label.control-label.ico__calendar(for='min-date')
+          input#min-date.form-control(type='text', size='10', ng-model='sharedDate', data-autoclose='1', placeholder='Date', bs-datepicker='')
         span.filter__text до:
-        .datepicker date label
+        .form-group
+          label.control-label.ico__calendar(for='max-date')
+          input#max-date.form-control(type='text', size='10', ng-model='sharedDate', data-autoclose='1', placeholder='Date', bs-datepicker='')
       .filter__col.filter__col--2
-        label.control-label(for='min-days') Срок сдачи (в днях) от:
+        label.control-label(for='min-days') Срок сдачи&nbsp;
+          span.filter__text-mq (в днях)&nbsp;
+          | от:
         input#min-days.form-control(type='text', placeholder='1', name='min-days')
         label.control-label(for='max-days') до:
         input#min-days.form-control(type='text', placeholder='365', name='max-days')
@@ -57,10 +66,15 @@
       select#specialization.form-control(name='specialization')
         option(value='Выберите специализацию') Выберите специализацию
         option(value='Естественные науки:') Естественные науки:
-      button.btn(type='button') Добавить
+      button.btn.filter__btn-add(type='button') Добавить
+        i.ico.ico__plus
       button.btn.specialization-tag(type='button') География
+        i.ico.ico__close
       button.btn.specialization-tag(type='button') Геология
+        i.ico.ico__close
       button.btn.specialization-tag(type='button') Материаловедение
+        i.ico.ico__close
       button.btn.specialization-tag(type='button') Минералогия
-      button.btn.filter__submit#filter__submit(type='button') Найти заказы
+        i.ico.ico__close
+      button.btn.btn-success.filter__submit#filter__submit(type='button') Найти заказы
 // END $filter

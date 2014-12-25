@@ -161,17 +161,14 @@
     <!-- BEGIN $main-->
     <main class="main">
       <!-- BEGIN $header-->
-      <div class="header cf"><a href="index.html" class="header__btn"><i class="ico ico__notice"></i><span class="header__btn-text">События</span><span class="header__btn-counter">5</span></a><a href="index.html" class="header__btn"><i class="ico ico__list"></i><span class="header__btn-text">Мои заказы</span></a>
+      <div class="header cf"><a href="index.html" class="btn-q"><i class="ico ico__notice"></i><span class="btn-q__t">События</span><span class="btn-q__counter">5</span></a><a href="index.html" class="btn-q"><i class="ico ico__list"></i><span class="btn-q__t">Мои заказы</span></a>
         <a
-        href="index.html" title="Статистика" class="header__btn header__btn--notext"><i class="ico ico__stats"></i>
+        href="index.html" title="Статистика" class="btn-q btn-q--notext"><i class="ico ico__stats"></i>
           </a>
-          <div class="header__btn-row"><a href="index.html" title="Корзина" class="header__btn header__btn--notext"><i class="ico ico__cart"></i></a><a href="index.html" class="header__btn"><i class="ico ico__rub"></i><span class="header__btn-text">52</span></a><a href="index.html"
-            class="header__btn"><span class="header__btn-text">Купить PRO</span></a>
+          <div class="header__btn-row"><a href="index.html" title="Корзина" class="btn-q btn-q--notext"><i class="ico ico__cart"></i></a><a href="index.html" class="btn-q"><i class="ico ico__rub"></i><span class="btn-q__t">52</span></a><a href="index.html" class="btn-q"><span class="btn-q__t">Купить PRO</span></a>
           </div>
-          <div class="header__btn-row header__btn-row--right"><a href="index.html" class="header__btn"><i class="ico ico__user"></i><span class="header__btn-text header__btn-text--lsh">Simpleusername</span></a><a href="index.html" title="Настройки" class="header__btn header__btn--notext"><i class="ico ico__gear"></i></a>
-            <a
-            href="index.html" title="Выход" class="header__btn header__btn--notext"><i class="ico ico__exit"></i>
-              </a>
+          <div class="header__btn-row header__btn-row--right"><a href="index.html" class="btn-q"><i class="ico ico__user"></i><span class="btn-q__t btn-q__t--lsh">Simpleusername</span></a><a href="index.html" title="Настройки" class="btn-q btn-q--notext"><i class="ico ico__gear"></i></a><a href="index.html"
+            title="Выход" class="btn-q btn-q--notext"><i class="ico ico__exit"></i></a>
           </div>
       </div>
       <!-- END $header-->
@@ -249,7 +246,7 @@
       </div>
       <!-- END $promo-->
       <!-- BEGIN $filter-->
-      <div class="filter cf">
+      <div class="filter cf opened">
         <ul class="filter__list">
           <li class="filter__list-item filter__list-item--active"><a href="index.html" class="filter__list-link">Все проекты</a>
           </li>
@@ -265,7 +262,7 @@
             <button type="button" class="filter__btn">Фильтр</button>
           </li>
         </ul>
-        <form id="filter" action="index.html" method="post" name="filter" init-block="_temp.scss" class="filter__form cf">
+        <form id="filter" action="index.html" method="post" name="filter" class="filter__form cf"><span class="filter__form-arrow"></span>
           <!-- BEGIN $range-s-->
           <div class="range-s">
             <div class="range-s__row"><span class="range-s__text">Бюджет: от</span><span class="range-s__text"><span class="range-s__text-value">1 000</span><span class="range-s__text-currency">руб</span></span><span class="range-s__text">до</span><span class="range-s__text"><span class="range-s__text-value">35 000</span>
@@ -274,19 +271,25 @@
                 </span>
                 <div class="form-group">
                   <label for="nonbudget" class="control-label">В том числе проекты с неуказанным бюджетом</label>
-                  <input id="nonbudget" type="text" placeholder="" name="nonbudget" class="form-control">
+                  <input id="nonbudget" type="checkbox" name="nonbudget" class="form-control">
                 </div>
             </div>
             <div id="range-s__slider" min="0" max="100000" class="range-s__slider">slider</div>
           </div>
           <!-- END $range-s-->
           <div class="filter__row">
-            <div class="filter__col filter__col--1"><span class="filter__text">Дата публикации от:</span>
-              <div class="datepicker">date label</div><span class="filter__text">до:</span>
-              <div class="datepicker">date label</div>
+            <div class="filter__col filter__col--1"><span class="filter__text">Дата&nbsp;<span class="filter__text-mq">публикации&nbsp;</span>от:</span>
+              <div class="form-group">
+                <label for="min-date" class="control-label ico__calendar"></label>
+                <input id="min-date" type="text" size="10" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker="" class="form-control">
+              </div><span class="filter__text">до:</span>
+              <div class="form-group">
+                <label for="max-date" class="control-label ico__calendar"></label>
+                <input id="max-date" type="text" size="10" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker="" class="form-control">
+              </div>
             </div>
             <div class="filter__col filter__col--2">
-              <label for="min-days" class="control-label">Срок сдачи (в днях) от:</label>
+              <label for="min-days" class="control-label">Срок сдачи&nbsp;<span class="filter__text-mq">(в днях)&nbsp;</span>от:</label>
               <input id="min-days" type="text" placeholder="1" name="min-days" class="form-control">
               <label for="max-days" class="control-label">до:</label>
               <input id="min-days" type="text" placeholder="365" name="max-days" class="form-control">
@@ -329,19 +332,24 @@
               <option value="Выберите специализацию">Выберите специализацию</option>
               <option value="Естественные науки:">Естественные науки:</option>
             </select>
-            <button type="button" class="btn">Добавить</button>
-            <button type="button" class="btn specialization-tag">География</button>
-            <button type="button" class="btn specialization-tag">Геология</button>
-            <button type="button" class="btn specialization-tag">Материаловедение</button>
-            <button type="button" class="btn specialization-tag">Минералогия</button>
-            <button id="filter__submit" type="button" class="btn filter__submit">Найти заказы</button>
+            <button type="button" class="btn filter__btn-add">Добавить<i class="ico ico__plus"></i>
+            </button>
+            <button type="button" class="btn specialization-tag">География<i class="ico ico__close"></i>
+            </button>
+            <button type="button" class="btn specialization-tag">Геология<i class="ico ico__close"></i>
+            </button>
+            <button type="button" class="btn specialization-tag">Материаловедение<i class="ico ico__close"></i>
+            </button>
+            <button type="button" class="btn specialization-tag">Минералогия<i class="ico ico__close"></i>
+            </button>
+            <button id="filter__submit" type="button" class="btn btn-success filter__submit">Найти заказы</button>
           </div>
         </form>
       </div>
       <!-- END $filter-->
       <!-- BEGIN $proj-l-->
       <div class="proj-l">
-        <div class="proj-l__item proj-l__item--paid-up"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item proj-l__item--paid-up"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -360,7 +368,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -379,7 +387,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item opened"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item opened"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -398,7 +406,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -417,7 +425,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -436,7 +444,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -455,7 +463,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item proj-l__item--paid-up proj-l__item--hot opened"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item proj-l__item--paid-up proj-l__item--hot opened"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -474,7 +482,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -493,7 +501,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
@@ -512,8 +520,8 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
-          <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
+        <div class="proj-l__item proj-l__item--hot"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии Написание рефератов и курсовой по физики и химии</span></a>
+          <div class="proj-l__price"><span class="proj-l__price-value proj-l__price-value--nonbudget">По договоренности</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">
             <ul class="proj-l__links">
@@ -531,7 +539,7 @@
             </div>
           </div>
         </div>
-        <div class="proj-l__item opened"><a href="index.html" class="proj-l__title">Написание рефератов и курсовой по физики и химии</a>
+        <div class="proj-l__item opened"><a href="index.html" class="proj-l__title"><span class="proj-l__title-in">Написание рефератов и курсовой по физики и химии</span></a>
           <div class="proj-l__price"><span class="proj-l__price-value">2000</span><span class="proj-l__price-currency">руб</span>
           </div>
           <div class="proj-l__content">

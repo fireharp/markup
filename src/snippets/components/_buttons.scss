@@ -1,0 +1,59 @@
+/*------------------------------------*\
+  BEGIN $_buttons
+\*------------------------------------*/
+
+.btn-q {
+  @extend %font--alpha;
+  @extend %tdn;
+  position:         relative;
+  z-index:          2;
+  display:          block;
+  float:            left;
+  margin-right:     10px;
+  padding:          8px 10px;
+  height:           40px;
+  border:           3px solid #ccc;
+  border-radius:    3px;
+  background-color: #e8e8e8;
+  color:            #4c4c4c !important;
+  font-size:        1.6rem;
+  line-height:      2rem;
+  transition:       background-color .15s;
+  &:hover {
+    background-color: #eee;
+  }
+
+  &__t {
+    display: block;
+    float:   left;
+    &--lsh {
+      display: none;
+      @include bp(screen-beta) {
+        display: block;
+      }
+    }
+  }
+  .ico {
+    display:    block;
+    float:      left;
+    margin-top: 1px;
+    & + .btn-q__t {
+      margin-left: 8px;
+    }
+  }
+  &__counter {
+    position:         absolute;
+    top:              -8px;
+    right:            -8px;
+    display:          block;
+    padding:          0 6px;
+    min-width:        20px;
+    height:           20px;
+    border-radius:    50%;
+    background-color: #009cc3;
+    color:            #fff;
+    font-size:        1.4rem;
+  }
+}
+
+/* END $_buttons */

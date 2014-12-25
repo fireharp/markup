@@ -16,6 +16,12 @@
   font-family: $fallback__font;
 }
 
+%font--delta {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: $fallback__font;
+}
+
 .cf {
   &::after, &::before {
     display: table;

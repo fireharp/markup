@@ -1,0 +1,22 @@
+// BEGIN $p-user
+.p-user
+  .p-user__ava
+    span.p-user__online(title='Пользователь в сети')
+    a.p-user__ava-link(href=link): img.p-user__ava-img(src='images/inline/avalancer-2.jpg', width, height, alt='')
+  .p-user__info
+    .p-user__row
+      a.p-user__name(href=link) Никита Светлов
+      a.p-user__verifed(href=link)
+      a.p-user__pro(href=link)
+      a.p-user__education(href=link) Бакалавр
+      span.p-user__rating Рейтинг:
+        span.p-user__rating-value 2790
+    | Зарегистрирован на сайте: 3 месяца
+    br
+    | Завершенных заказов: 170
+    ul.p-user__reviews
+      li.p-user__reviews-item: span.p-user__reviews-text Отзывы:
+      li.p-user__reviews-item: a.p-user__reviews-link.p-user__reviews-link--good(href=link) 35
+      li.p-user__reviews-item: a.p-user__reviews-link.p-user__reviews-link--neutral(href=link) 5
+      li.p-user__reviews-item: a.p-user__reviews-link.p-user__reviews-link--bad(href=link) 1
+// END $p-user

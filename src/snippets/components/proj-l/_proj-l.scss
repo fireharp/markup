@@ -2,9 +2,10 @@
   BEGIN $proj-l
 \*------------------------------------*/
 .proj-l {
-  padding: 22px 20px 24px;
+  padding: 0 20px 24px;
   &__item {
     @extend %font--gamma;
+    @extend .cf;
     position:   relative;
     z-index:    2;
     padding:    15px 17px;
@@ -39,25 +40,59 @@
   }
 
   &__title {
-    position:     relative;
-    z-index:      2;
-    display:      inline-block;
-    margin-right: 160px;
-    font-size:    2rem;
-    line-height:  2.4rem;
+    position:    relative;
+    z-index:     2;
+    display:     block;
+    float:       left;
+    max-width:   70%;
+    height:      2.4rem;
+    font-size:   2rem;
+    line-height: 2.4rem;
+    @include bp(screen-beta) {
+      max-width: 78%;
+    }
+    &:after {
+      @extend %pseudoBeforeAfter;
+      top:        0;
+      right:      0;
+      bottom:     0;
+      left:       auto;
+      width:      20px;
+      background: linear-gradient(to left, #e1e1e1, rgba(#e1e1e1, 0));
+      .proj-l__item:nth-child(odd) & {
+        background: linear-gradient(to left, #ebebeb, rgba(#ebebeb, 0));
+      }
+      .proj-l__item:hover & {
+        background: linear-gradient(to left, #ebebeb, rgba(#ebebeb, 0));
+      }
+      .opened & {
+        background: linear-gradient(to left, #f4f4f4, rgba(#f4f4f4, 0)) !important;
+      }
+
+    }
     .opened & {
       text-decoration: underline;
     }
     .proj-l__item--hot & {
       &:before {
         @extend %pseudoBeforeAfter;
-        right:             -30px;
+        right:             -25px;
         left:              auto;
+        z-index:           3;
         width:             16px;
         height:            24px;
         background-image:  url("../images/sprite/ico__flame.png");
         background-repeat: no-repeat;
       }
+    }
+    &-in {
+      display:     block;
+      float:       left;
+      clear:       both;
+      overflow:    hidden;
+      padding:     0 20px 0 0;
+      max-width:   100%;
+      white-space: nowrap;
     }
   }
 
@@ -78,6 +113,12 @@
     &-value {
       display: block;
       float:   left;
+      &--nonbudget {
+        font-weight: normal;
+        & + .proj-l__price-currency {
+          display: none;
+        }
+      }
     }
     &-currency {
       display:     block;
@@ -164,14 +205,11 @@
   &__ico {
     display: inline-block;
     .proj-l__row-item--pro & {
+      @extend .ico__pro;
       position:          absolute;
       top:               0;
       right:             0;
       z-index:           2;
-      width:             30px;
-      height:            16px;
-      background-image:  url("../images/sprite/ico__pro.png");
-      background-repeat: no-repeat;
     }
     &--comment {
       width:             15px;
@@ -219,10 +257,6 @@
       &:before {
         @extend %pseudoBeforeAfter;
         top:               2px;
-        width:             15px;
-        height:            13px;
-        background-image:  url("../images/sprite/ico__comment.png");
-        background-repeat: no-repeat;
       }
     }
   }

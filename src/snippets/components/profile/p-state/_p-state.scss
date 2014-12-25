@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  BEGIN $p-state
+\*------------------------------------*/
+.p-state {
+  @extend %font--delta;
+  float:       right;
+  padding-top: 15px;
+  width:       240px;
+  color:       #515151;
+  font-size:   1.2rem;
+  line-height: 1.6rem;
+  &__title {
+    @extend %font--alpha;
+    display:        block;
+    padding-bottom: 2px;
+    font-size:      1.4rem;
+  }
+  &__title-status {
+    display:      inline-block;
+    padding-left: 4px;
+    &--not-selected {
+      color: #28a900;
+    }
+  }
+
+}
+
+/* END $p-state */

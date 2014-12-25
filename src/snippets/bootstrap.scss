@@ -1,2 +1,84 @@
+@import "../bower_components/bootstrap-sass-master/assets/stylesheets/bootstrap/mixins/buttons";
+
+
+$btn-default-color:              #fff;
+$brand-info: #279ef1;
+$brand-info-light: #2fcbe2;
+$brand-success: #3abc00;
+$brand-success-darken: #65ae2f;
 $brand-warning: #ff7200;
+$brand-warning-light: #d89b3a;
+$brand-warning-darken: #e26a2f;
+$brand-danger-1: #d43d3d;
+$brand-danger-2: #d04d29;
+$brand-danger-3: #ce0000;
+$brand-violet: #9569bd;
+$brand-gray: #929292;
+//success-darken
+$btn-success-darken-color: #fff;
+$btn-success-darken-bg: $brand-success-darken;
+$btn-success-darken-border: darken($btn-success-darken-bg, 5%);
+.btn-success-darken {
+  @include button-variant($btn-success-darken-color, $btn-success-darken-bg, $btn-success-darken-border);
+}
+//danger-1
+$btn-danger-1-color: #fff;
+$btn-danger-1-bg: $brand-danger-1;
+$btn-danger-1-border: darken($btn-danger-1-bg, 5%);
+.btn-danger-1 {
+  @include button-variant($btn-danger-1-color, $btn-danger-1-bg, $btn-danger-1-border);
+}
+//danger-2
+$btn-danger-2-color: #fff;
+$btn-danger-2-bg: $brand-danger-2;
+$btn-danger-2-border: darken($btn-danger-2-bg, 5%);
+.btn-danger-2 {
+  @include button-variant($btn-danger-2-color, $btn-danger-2-bg, $btn-danger-2-border);
+}
+//danger-3
+$btn-danger-3-color: #fff;
+$btn-danger-3-bg: $brand-danger-3;
+$btn-danger-3-border: darken($btn-danger-3-bg, 5%);
+.btn-danger-3 {
+  @include button-variant($btn-danger-3-color, $btn-danger-3-bg, $btn-danger-3-border);
+}
+//warning-light
+$btn-warning-light-color: #fff;
+$btn-warning-light-bg: $brand-warning-light;
+$btn-warning-light-border: darken($btn-warning-light-bg, 5%);
+.btn-warning-light {
+  @include button-variant($btn-warning-light-color, $btn-warning-light-bg, $btn-warning-light-border);
+}
+//warning-darken
+$btn-warning-darken-color: #fff;
+$btn-warning-darken-bg: $brand-warning-darken;
+$btn-warning-darken-border: darken($btn-warning-darken-bg, 5%);
+.btn-warning-darken {
+  @include button-variant($btn-warning-darken-color, $btn-warning-darken-bg, $btn-warning-darken-border);
+}
+//violet
+$btn-violet-color: #fff;
+$btn-violet-bg: $brand-violet;
+$btn-violet-border: darken($btn-violet-bg, 5%);
+.btn-violet {
+  @include button-variant($btn-violet-color, $btn-violet-bg, $btn-violet-border);
+}
+//info-light
+$btn-info-light-color: #fff;
+$btn-info-light-bg: $brand-info-light;
+$btn-info-light-border: darken($btn-info-light-bg, 5%);
+.btn-info-light {
+  @include button-variant($btn-info-light-color, $btn-info-light-bg, $btn-info-light-border);
+}
+//gray
+$btn-gray-color: #fff;
+$btn-gray-bg: $brand-gray;
+$btn-gray-border: darken($btn-gray-bg, 5%);
+.btn-gray {
+  @include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+}
+
+$padding-base-vertical: 5px;
+$font-size-base: 16px;
+
 @import "../bower_components/bootstrap-sass-master/assets/stylesheets/bootstrap";

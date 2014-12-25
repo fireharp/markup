@@ -3,24 +3,50 @@
 \*------------------------------------*/
 .range-s {
   .form-group {
+    float:         right;
     margin-bottom: 0;
+    color:         #4a4a4a;
+    font-weight:   normal;
+  }
+  .control-label {
+    cursor:      pointer;
+    user-select: none;
+  }
+  .form-control {
+    display:      block;
+    float:        left;
+    margin-top:   1px;
+    margin-right: 4px;
+    width:        16px;
+    height:       16px;
+    outline:      none;
+    cursor:       pointer;
   }
 }
 
 .range-s__row {
-
+  @extend %font--delta;
+  clear:       both;
+  overflow:    hidden;
+  font-size:   1.4rem;
+  line-height: 1.6rem;
 }
 
 .range-s__text {
-
+  display:       block;
+  float:         left;
+  padding-right: 4px;
+  color:         #2d2d2d;
 }
 
-.range-s__text-value {
-
+.range-s__text-value, .range-s__text-currency {
+  display: block;
+  float:   left;
+  color:   #c98d0d;
 }
 
 .range-s__text-currency {
-
+  padding-left: 4px;
 }
 
 .range-s__slider {
