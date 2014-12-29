@@ -1,28 +1,36 @@
 // BEGIN $header
 .header.cf
-  if pagename == 'index'
+  if pagename == 'user-type'
+    .user-t__header-title Представьтесь, пожалуйста:
+  else
+    if pagename == 'index'
+      a.btn-q(href=link)
+        i.ico.ico__notice
+        span.btn-q__t События
+        span.btn-q__counter 5
+    if pagename == 'order' || 'catalog'
+      a.btn-q(href=link)
+        i.ico.ico__envelope
+        span.btn-q__t Сообщения
+    if pagename == 'catalog'
+      a.btn-q(href=link)
+        i.ico.ico__check-q
+        span.btn-q__t Работы
     a.btn-q(href=link)
-      i.ico.ico__notice
-      span.btn-q__t События
-      span.btn-q__counter 5
-  if pagename == 'order'
-    a.btn-q(href=link)
-      i.ico.ico__envelope
-      span.btn-q__t Сообщения
-  a.btn-q(href=link)
-    i.ico.ico__list
-    span.btn-q__t Мои заказы
-  a.btn-q.btn-q--notext(href=link, title='Статистика'): i.ico.ico__stats
-  .header__btn-row
-    a.btn-q.btn-q--notext(href=link, title='Корзина'): i.ico.ico__cart
-    a.btn-q(href=link)
-      i.ico.ico__rub
-      span.btn-q__t 52
-    a.btn-q(href=link): span.btn-q__t Купить PRO
-  .header__btn-row.header__btn-row--right
-    a.btn-q(href=link)
-      i.ico.ico__user
-      span.btn-q__t.btn-q__t--lsh Simpleusername
-    a.btn-q.btn-q--notext(href=link, title='Настройки'): i.ico.ico__gear
-    a.btn-q.btn-q--notext(href=link, title='Выход'): i.ico.ico__exit
+      i.ico.ico__list
+      span.btn-q__t Заказы
+    if !pagename == 'catalog'
+      a.btn-q.btn-q--notext(href=link, title='Статистика'): i.ico.ico__stats
+    .header__btn-row
+      a.btn-q.btn-q--notext(href=link, title='Корзина'): i.ico.ico__cart
+      a.btn-q(href=link)
+        i.ico.ico__rub
+        span.btn-q__t 52
+      a.btn-q(href=link): span.btn-q__t Купить PRO
+    .header__btn-row.header__btn-row--right
+      a.btn-q(href=link)
+        i.ico.ico__user
+        span.btn-q__t.btn-q__t--lsh Simpleusername
+      a.btn-q.btn-q--notext(href=link, title='Настройки'): i.ico.ico__gear
+      a.btn-q.btn-q--notext(href=link, title='Выход'): i.ico.ico__exit
 // END $header

@@ -1,0 +1,109 @@
+/*------------------------------------*\
+  BEGIN $answer-p
+\*------------------------------------*/
+.answer-p {
+  padding:       34px 40px 40px;
+  border-bottom: 6px solid #d3d3d3;
+  &__in {
+    display: block;
+    margin:  0;
+    padding: 0;
+    width:   perc(720, 960);
+    border:  none;
+  }
+  &__title {
+    @extend %font--alpha;
+    display:     block;
+    margin:      0 0 18px;
+    padding:     0;
+    color:       #000;
+    font-size:   2.4rem;
+    line-height: 2.8rem;
+  }
+
+  .form-group {
+    display:       block;
+    float:         left;
+    margin-right:  perc(15, 960);
+    margin-bottom: 20px;
+    max-width:     142px;
+    width:         perc(220, 960);
+  }
+  &__tarea {
+    &.form-group {
+      float:     none;
+      clear:     both;
+      overflow:  hidden;
+      max-width: 100%;
+      width:     100%;
+    }
+    .form-control {
+      min-height: 144px;
+    }
+  }
+
+  &__faq {
+    position:         relative;
+    z-index:          2;
+    float:            left;
+    margin-top:       6px;
+    margin-right:     perc(15, 960);
+    width:            22px;
+    height:           22px;
+    border:           2px solid #fff;
+    border-radius:    50%;
+    background-color: #ff7200;
+    cursor:           pointer;
+    &.opened {
+      background-color: #222;
+    }
+    .ico {
+      @extend .ico__question;
+      position:    absolute;
+      top:         50%;
+      left:        50%;
+      z-index:     2;
+      margin-top:  -6px;
+      margin-left: -4px;
+    }
+  }
+
+  &__result {
+    float:        left;
+    margin-right: perc(15, 960);
+    color:        #989898;
+    line-height:  3.4rem;
+  }
+
+  &__submit-wrap {
+    float:        right !important;
+    margin-right: 0 !important;
+    width:        auto !important;
+  }
+
+  &__alert {
+    @extend %font--beta;
+    position:         relative;
+    z-index:          2;
+    clear:            both;
+    overflow:         hidden;
+    margin-top:       20px;
+    padding:          28px 37px 28px 15px;
+    border:           1px solid #ebccd1;
+    border-radius:    3px;
+    background-color: #f2dede;
+    color:            #a94442;
+    font-size:        1.4rem;
+    line-height:      1.8rem;
+    .ico {
+      @extend .ico__close-3;
+      position:   absolute;
+      top:        50%;
+      right:      17px;
+      z-index:    2;
+      margin-top: -5px;
+    }
+  }
+}
+
+/* END $answer-p */

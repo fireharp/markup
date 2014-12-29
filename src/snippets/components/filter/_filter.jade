@@ -1,9 +1,15 @@
 // BEGIN $filter
 .filter.cf.opened
   ul.filter__list
-    li.filter__list-item.filter__list-item--active: a.filter__list-link(href=link) Все проекты
+    if !pagename == 'catalog'
+      li.filter__list-item.filter__list-item--active: a.filter__list-link(href=link) Все проекты
+    else
+      li.filter__list-item: a.filter__list-link(href=link) Все проекты
     li.filter__list-item: a.filter__list-link(href=link) Только для PRO
-    li.filter__list-item: a.filter__list-link(href=link) Пользователи
+    if pagename == 'catalog'
+      li.filter__list-item.filter__list-item--active: a.filter__list-link(href=link) Пользователи
+    else
+      li.filter__list-item: a.filter__list-link(href=link) Пользователи
     li.filter__list-item: a.filter__list-link(href=link) Магазин
     li.filter__list-item: a.filter__list-link(href=link) Блоги
     li.filter__list-item.filter__list-item--right: button.filter__btn(type='button') Фильтр
@@ -68,13 +74,13 @@
         option(value='Естественные науки:') Естественные науки:
       button.btn.filter__btn-add(type='button') Добавить
         i.ico.ico__plus
-      button.btn.specialization-tag(type='button') География
+      .btn.specialization-tag География
         i.ico.ico__close
-      button.btn.specialization-tag(type='button') Геология
+      .btn.specialization-tag Геология
         i.ico.ico__close
-      button.btn.specialization-tag(type='button') Материаловедение
+      .btn.specialization-tag Материаловедение
         i.ico.ico__close
-      button.btn.specialization-tag(type='button') Минералогия
+      .btn.specialization-tag Минералогия
         i.ico.ico__close
       button.btn.btn-success.filter__submit#filter__submit(type='button') Найти заказы
 // END $filter

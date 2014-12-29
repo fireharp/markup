@@ -3,6 +3,7 @@
 \*------------------------------------*/
 .header {
   padding:    20px;
+  min-height: 80px;
   background: #d9d9d9;
 }
 
@@ -22,6 +23,14 @@
       border-radius: 0 3px 3px 0;
     }
   }
+}
+
+.user-t__header-title {
+  @extend %font--beta;
+  color:       #484848;
+  text-align:  center;
+  font-size:   3rem;
+  line-height: 4rem;
 }
 
 /* END $header */

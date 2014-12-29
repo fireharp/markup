@@ -1,10 +1,28 @@
 // BEGIN $proj-v
-.proj-v.cf(init-block='_temp.scss')
+.proj-v.cf
   .proj-v__col-right
     .proj-v__price Цена:
       span.proj-v__price-value 15000
       span.proj-v__price-currency руб
     .proj-v__date Срок сдачи: 12.12.2014
+    a.btn-q(href=link)
+      i.ico.ico__star
+      span.btn-q__t В избранное
+    a.btn-q(href=link)
+      i.ico.ico__list-green
+      span.btn-q__t Распечатать
+    a.btn-q(href=link)
+      i.ico.ico__ban
+      span.btn-q__t Пожаловаться
+    ul.socials-list
+      li.socials-list__item: a.socials-list__link(href=link): i.ico.ico__s-yandex
+      li.socials-list__item: a.socials-list__link(href=link): i.ico.ico__s-vk
+      li.socials-list__item: a.socials-list__link(href=link): i.ico.ico__s-fb
+      li.socials-list__item: a.socials-list__link(href=link): i.ico.ico__s-tw
+      li.socials-list__item: a.socials-list__link(href=link): i.ico.ico__s-lj
+      li.socials-list__item: a.socials-list__link(href=link): i.ico.ico__s-gp
+      li.socials-list__item: a.socials-list__link(href=link): i.ico.ico__s-v
+      li.socials-list__item: a.socials-list__link(href=link): i.ico.ico__s-in
   .proj-v__col-left
     h1.proj-v__title Реферат по истории отечества
     ul.proj-v__breadcrumbs
@@ -12,7 +30,7 @@
       li.proj-v__breadcrumbs-item: a.proj-v__breadcrumbs-link(href=link) История
       li.proj-v__breadcrumbs-item Реферат
     .proj-v__text Не факт, что селекция бренда изящно притягивает потребительский нестандартный подход, отвоевывая рыночный сегмент. Диверсификация бизнеса, анализируя результаты рекламной кампании, интуитивно продуцирует эмпирический CTR, учитывая современные тенденции. Корпоративная культура, на первый взгляд, допускает рекламный макет, не считаясь с затратами. Маркетингово-ориентированное издание как всегда непредсказуемо.
-    button.btn.btn-info(type='button')
+    button.btn.btn--no-close.btn-info(type='button')
       span.btn__back
         i.ico.ico__text
       span.btn__t Задание.docx

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>catalog</title>
+  <meta name="description" content="project description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BEGIN favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+  <!-- END favicons-->
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- BEGIN $sidebar-->
+    <aside class="sidebar">
+      <div class="sidebar__header">
+        <a href="catalog.html">
+          <img src="images/inline/studlance-logo.png" width="200" height="28" alt="Studlance">
+        </a>
+      </div>
+      <div class="sidebar__row">
+        <button type="button" class="btn btn-warning">Добавить заказ</button>
+      </div>
+      <!-- BEGIN $nav-->
+      <div class="nav">
+        <div class="nav__title">Каталог пользователей:</div>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="catalog.html" class="nav__link"><i class="nav__ico nav__ico--humanities"></i>Гуманитарные науки</a>
+            <li class="nav__item opened"><a href="catalog.html" class="nav__link"><i class="nav__ico nav__ico--natural"></i>Естественные науки</a>
+              <ul class="nav__list-2">
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Астрономия</a><span class="nav__counter">14</span>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Биология</a><span class="nav__counter">42</span>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">География</a><span class="nav__counter">17</span>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Геология</a><span class="nav__counter">22</span>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Геофизика</a><span class="nav__counter">65</span>
+                </li>
+                <li class="nav__item-2 opened"><a href="catalog.html" class="nav__link-2">Математика</a><span class="nav__counter">32</span>
+                  <ul class="nav__list-3">
+                    <li class="nav__item-3"><a href="catalog.html" class="nav__link-3">Обычная</a>
+                    </li>
+                    <li class="nav__item-3"><a href="catalog.html" class="nav__link-3">Алгебра</a>
+                    </li>
+                    <li class="nav__item-3"><a href="catalog.html" class="nav__link-3">Геометрия</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Материаловедение</a><span class="nav__counter">12</span>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Медицина</a><span class="nav__counter">75</span>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Минералогия</a><span class="nav__counter">32</span>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Физика</a><span class="nav__counter">13</span>
+                </li>
+                <li class="nav__item-2"><a href="catalog.html" class="nav__link-2">Химия</a><span class="nav__counter">11</span>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item"><a href="catalog.html" class="nav__link"><i class="nav__ico nav__ico--technic"></i>Технические науки</a>
+            </li>
+            <li class="nav__item"><a href="catalog.html" class="nav__link"><i class="nav__ico nav__ico--social"></i>Общественные науки</a>
+            </li>
+            <li class="nav__item"><a href="catalog.html" class="nav__link"><i class="nav__ico nav__ico--applied"></i>Прикладные науки</a>
+            </li>
+            <li class="nav__item"><a href="catalog.html" class="nav__link"><i class="nav__ico nav__ico--other"></i>Прочее</a>
+            </li>
+          </li>
+        </ul>
+      </div>
+      <!-- END $nav-->
+      <div class="sidebar__support"><i class="ico__phone"></i>
+        <div class="sidebar__support-phone">8 800 355-45-43</div><span class="sidebar__support-sub">Служба поддержки</span>
+      </div>
+      <div class="sidebar__time"><i class="ico__watch"></i><span class="sidebar__time-value">12:44</span><span class="sidebar__time-local">MSK (GMT+3)<span class="sidebar__time-local-sub">Локальное время</span></span>
+      </div>
+      <!-- search-proj-->
+      <form id="search-proj" action="catalog.html" method="post" name="search-proj" class="search-proj">
+        <div class="form-group">
+          <input id="search-proj__input" name="search-proj__input" type="text" placeholder="Поиск по проектам" class="form-control input-md">
+          <button id="search-proj__submit" name="search-proj__submit" class="btn btn-primary"></button>
+        </div>
+      </form>
+      <!-- services-->
+      <ul class="services">
+        <li class="services__title">Услуги фрилансеров:</li>
+        <li class="services__item">
+          <a href="catalog.html" class="services__ava">
+            <img src="images/inline/avalancer-1.jpg" width="60" height="60" alt="" class="services__ava-img">
+          </a><span class="services__text"><span class="valign"><a href="catalog.html" class="services__name">Константин Петров</a><span class="services__subtitle">Рефераты по химии</span></span>
+          </span>
+        </li>
+        <li class="services__item">
+          <a href="catalog.html" class="services__ava">
+            <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="services__ava-img">
+          </a><span class="services__text"><span class="valign"><a href="catalog.html" class="services__name">Никита Светлов</a><span class="services__subtitle">Курсовые по истории</span></span>
+          </span>
+        </li>
+        <li class="services__item">
+          <a href="catalog.html" class="services__ava">
+            <img src="images/inline/avalancer-3.jpg" width="84" height="84" alt="" class="services__ava-img">
+          </a><span class="services__text"><span class="valign"><a href="catalog.html" class="services__name">Генадий Гордеев</a><span class="services__subtitle">Задачи по программированию</span></span>
+          </span>
+        </li>
+        <li class="services__item">
+          <a href="catalog.html" class="services__ava">
+            <img src="images/inline/avalancer-4.jpg" width="73" height="73" alt="" class="services__ava-img">
+          </a><span class="services__text"><span class="valign"><a href="catalog.html" class="services__name">Владислав Антоновский</a><span class="services__subtitle">Профессиональный вынос мозга</span></span>
+          </span>
+        </li>
+        <li class="services__item">
+          <a href="catalog.html" class="services__ava">
+            <img src="images/inline/avalancer-5.jpg" width="74" height="74" alt="" class="services__ava-img">
+          </a><span class="services__text"><span class="valign"><a href="catalog.html" class="services__name">Валерия Герасименко</a><span class="services__subtitle">Сочинения по литре</span></span>
+          </span>
+        </li>
+        <li class="services__item">
+          <a href="catalog.html" class="services__ava"></a><span class="services__text"><span class="valign"><a href="catalog.html" class="services__name">Купить это место</a><span class="services__subtitle">20 S в неделю</span></span>
+          </span>
+        </li>
+      </ul>
+      <!-- soc-list-->
+      <ul class="soc-list">
+        <li class="soc-list__item"><a href="catalog.html" class="soc-list__link"><i class="ico ico--vk"></i></a>
+        </li>
+        <li class="soc-list__item"><a href="catalog.html" class="soc-list__link"><i class="ico ico--fb"></i></a>
+        </li>
+        <li class="soc-list__item"><a href="catalog.html" class="soc-list__link"><i class="ico ico--tw"></i></a>
+        </li>
+        <li class="soc-list__item"><a href="catalog.html" class="soc-list__link"><i class="ico ico--ok"></i></a>
+        </li>
+        <li class="soc-list__item"><a href="catalog.html" class="soc-list__link"><i class="ico ico--in"></i></a>
+        </li>
+      </ul>
+    </aside>
+    <!-- END $sidebar-->
+    <!-- BEGIN $main-->
+    <main class="main">
+      <!-- BEGIN $header-->
+      <div class="header cf"><a href="catalog.html" class="btn-q"><i class="ico ico__envelope"></i><span class="btn-q__t">Сообщения</span></a><a href="catalog.html" class="btn-q"><i class="ico ico__check-q"></i><span class="btn-q__t">Работы</span></a><a href="catalog.html"
+        class="btn-q"><i class="ico ico__list"></i><span class="btn-q__t">Заказы</span></a>
+        <div class="header__btn-row"><a href="catalog.html" title="Корзина" class="btn-q btn-q--notext"><i class="ico ico__cart"></i></a><a href="catalog.html" class="btn-q"><i class="ico ico__rub"></i><span class="btn-q__t">52</span></a>
+          <a href="catalog.html" class="btn-q"><span class="btn-q__t">Купить PRO</span>
+          </a>
+        </div>
+        <div class="header__btn-row header__btn-row--right"><a href="catalog.html" class="btn-q"><i class="ico ico__user"></i><span class="btn-q__t btn-q__t--lsh">Simpleusername</span></a><a href="catalog.html" title="Настройки" class="btn-q btn-q--notext"><i class="ico ico__gear"></i></a><a href="catalog.html"
+          title="Выход" class="btn-q btn-q--notext"><i class="ico ico__exit"></i></a>
+        </div>
+      </div>
+      <!-- END $header-->
+      <!-- BEGIN $carousel-->
+      <div class="carousel">
+        <button type="button" class="carousel__arrow carousel__arrow--left"></button>
+        <div class="carousel__in">
+          <li class="carousel__item">
+            <a href="catalog.html" class="carousel__ava">
+              <img src="images/inline/avalancer-1.jpg" width="60" height="60" alt="" class="carousel__ava-img">
+            </a><span class="carousel__text"><span class="valign"><a href="catalog.html" class="carousel__name">Константин Петров</a><span class="carousel__subtitle">Рефераты по химии</span></span>
+            </span>
+          </li>
+          <li class="carousel__item">
+            <a href="catalog.html" class="carousel__ava">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="carousel__ava-img">
+            </a><span class="carousel__text"><span class="valign"><a href="catalog.html" class="carousel__name">Никита Светлов</a><span class="carousel__subtitle">Курсовые по истории</span></span>
+            </span>
+          </li>
+          <li class="carousel__item">
+            <a href="catalog.html" class="carousel__ava">
+              <img src="images/inline/avalancer-3.jpg" width="84" height="84" alt="" class="carousel__ava-img">
+            </a><span class="carousel__text"><span class="valign"><a href="catalog.html" class="carousel__name">Генадий Гордеев</a><span class="carousel__subtitle">Задачи по программированию</span></span>
+            </span>
+          </li>
+          <li class="carousel__item">
+            <a href="catalog.html" class="carousel__ava">
+              <img src="images/inline/avalancer-4.jpg" width="73" height="73" alt="" class="carousel__ava-img">
+            </a><span class="carousel__text"><span class="valign"><a href="catalog.html" class="carousel__name">Владислав Антоновский</a><span class="carousel__subtitle">Профессиональный вынос мозга</span></span>
+            </span>
+          </li>
+          <li class="carousel__item">
+            <a href="catalog.html" class="carousel__ava">
+              <img src="images/inline/avalancer-5.jpg" width="74" height="74" alt="" class="carousel__ava-img">
+            </a><span class="carousel__text"><span class="valign"><a href="catalog.html" class="carousel__name">Валерия Герасименко</a><span class="carousel__subtitle">Сочинения по литре</span></span>
+            </span>
+          </li>
+          <li class="carousel__item">
+            <a href="catalog.html" class="carousel__ava">
+              <img src="images/inline/avalancer-5.jpg" width="74" height="74" alt="" class="carousel__ava-img">
+            </a><span class="carousel__text"><span class="valign"><a href="catalog.html" class="carousel__name">Валерия Герасименко</a><span class="carousel__subtitle">Сочинения по литре</span></span>
+            </span>
+          </li>
+        </div>
+        <button type="button" class="carousel__arrow carousel__arrow--right"></button><a href="catalog.html" class="carousel__buy-place">Купить место тут</a>
+      </div>
+      <!-- END $carousel-->
+      <!-- BEGIN $filter-->
+      <div class="filter cf opened">
+        <ul class="filter__list">
+          <li class="filter__list-item"><a href="catalog.html" class="filter__list-link">Все проекты</a>
+          </li>
+          <li class="filter__list-item"><a href="catalog.html" class="filter__list-link">Только для PRO</a>
+          </li>
+          <li class="filter__list-item filter__list-item--active"><a href="catalog.html" class="filter__list-link">Пользователи</a>
+          </li>
+          <li class="filter__list-item"><a href="catalog.html" class="filter__list-link">Магазин</a>
+          </li>
+          <li class="filter__list-item"><a href="catalog.html" class="filter__list-link">Блоги</a>
+          </li>
+          <li class="filter__list-item filter__list-item--right">
+            <button type="button" class="filter__btn">Фильтр</button>
+          </li>
+        </ul>
+        <form id="filter" action="catalog.html" method="post" name="filter" class="filter__form cf"><span class="filter__form-arrow"></span>
+          <!-- BEGIN $range-s-->
+          <div class="range-s">
+            <div class="range-s__row"><span class="range-s__text">Бюджет: от</span><span class="range-s__text"><span class="range-s__text-value">1 000</span><span class="range-s__text-currency">руб</span></span><span class="range-s__text">до</span><span class="range-s__text"><span class="range-s__text-value">35 000</span>
+              <span
+              class="range-s__text-currency">руб</span>
+                </span>
+                <div class="form-group">
+                  <label for="nonbudget" class="control-label">В том числе проекты с неуказанным бюджетом</label>
+                  <input id="nonbudget" type="checkbox" name="nonbudget" class="form-control">
+                </div>
+            </div>
+            <div id="range-s__slider" min="0" max="100000" class="range-s__slider">slider</div>
+          </div>
+          <!-- END $range-s-->
+          <div class="filter__row">
+            <div class="filter__col filter__col--1"><span class="filter__text">Дата&nbsp;<span class="filter__text-mq">публикации&nbsp;</span>от:</span>
+              <div class="form-group">
+                <label for="min-date" class="control-label ico__calendar"></label>
+                <input id="min-date" type="text" size="10" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker="" class="form-control">
+              </div><span class="filter__text">до:</span>
+              <div class="form-group">
+                <label for="max-date" class="control-label ico__calendar"></label>
+                <input id="max-date" type="text" size="10" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker="" class="form-control">
+              </div>
+            </div>
+            <div class="filter__col filter__col--2">
+              <label for="min-days" class="control-label">Срок сдачи&nbsp;<span class="filter__text-mq">(в днях)&nbsp;</span>от:</label>
+              <input id="min-days" type="text" placeholder="1" name="min-days" class="form-control">
+              <label for="max-days" class="control-label">до:</label>
+              <input id="min-days" type="text" placeholder="365" name="max-days" class="form-control">
+            </div>
+            <div class="filter__col filter__col--3">
+              <select id="type-job" name="type-job" class="form-control">
+                <option value="Тип работы">Тип работы</option>
+                <option value="По найму">По найму</option>
+                <option value="Удалённо">Удалённо</option>
+              </select>
+            </div>
+          </div>
+          <ul class="filter__fw-list">
+            <li class="filter__fw-list-item">
+              <input id="only-myspec" type="checkbox" name="only-myspec" class="form-control">
+              <label for="only-myspec" class="control-label"><span class="filter__fw-list-mq">Только</span>мои специализации</label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="only-hot" type="checkbox" name="only-hot" class="form-control">
+              <label for="only-hot" class="control-label"><span class="filter__fw-list-mq">Только</span>срочные заказы</label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="only-pro" type="checkbox" name="only-pro" class="form-control">
+              <label for="only-pro" class="control-label"><span class="filter__fw-list-mq">Только для</span><span title="Только для PRO" class="filter__ico-pro"></span>
+              </label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="only-verifed" type="checkbox" name="only-verifed" class="form-control">
+              <label for="only-verifed" class="control-label"><span class="filter__fw-list-mq">Только для верифицированных</span><span title="Только для верифицированных" class="filter__ico-verifed"></span>
+              </label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="verifed" type="checkbox" name="verifed" class="form-control">
+              <label for="verifed" class="control-label">
+                < 2 ответов в заказе</label>
+            </li>
+          </ul>
+          <div class="filter__row filter__row--specialization">
+            <select id="specialization" name="specialization" class="form-control">
+              <option value="Выберите специализацию">Выберите специализацию</option>
+              <option value="Естественные науки:">Естественные науки:</option>
+            </select>
+            <button type="button" class="btn filter__btn-add">Добавить<i class="ico ico__plus"></i>
+            </button>
+            <div class="btn specialization-tag">География<i class="ico ico__close"></i>
+            </div>
+            <div class="btn specialization-tag">Геология<i class="ico ico__close"></i>
+            </div>
+            <div class="btn specialization-tag">Материаловедение<i class="ico ico__close"></i>
+            </div>
+            <div class="btn specialization-tag">Минералогия<i class="ico ico__close"></i>
+            </div>
+            <button id="filter__submit" type="button" class="btn btn-success filter__submit">Найти заказы</button>
+          </div>
+        </form>
+      </div>
+      <!-- END $filter-->
+      <!-- BEGIN $user-cat-->
+      <div init-block="_temp.scss" class="user-cat">
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+        <!-- BEGIN $p-user-->
+        <div class="p-user">
+          <div class="p-user__ava"><span title="Пользователь в сети" class="p-user__online"></span>
+            <a href="catalog.html" class="p-user__ava-link">
+              <img src="images/inline/avalancer-2.jpg" width="83" height="78" alt="" class="p-user__ava-img">
+            </a>
+          </div>
+          <div class="p-user__info">
+            <div class="p-user__row"><a href="catalog.html" class="p-user__name">Никита Светлов</a>
+              <a href="catalog.html" class="p-user__verifed"></a>
+              <a href="catalog.html" class="p-user__pro"></a><a href="catalog.html" class="p-user__education">Бакалавр</a><span class="p-user__rating">Рейтинг:<span class="p-user__rating-value">2790</span></span>
+            </div>Зарегистрирован на сайте: 3 месяца
+            <br>Завершенных заказов: 170
+            <ul class="p-user__reviews">
+              <li class="p-user__reviews-item"><span class="p-user__reviews-text">Отзывы:</span>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--good">35</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--neutral">5</a>
+              </li>
+              <li class="p-user__reviews-item"><a href="catalog.html" class="p-user__reviews-link p-user__reviews-link--bad">1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END $p-user-->
+      </div>
+      <!-- END $user-cat-->
+      <!-- BEGIN $pagination-->
+      <div class="pagination">
+        <div class="pagination__title">Страницы:</div>
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a href="catalog.html" class="pagination__arrow pagination__arrow--left"></a>
+          </li>
+          <li class="pagination__item pagination__item--current"><a href="catalog.html" class="pagination__link">1</a>
+          </li>
+          <li class="pagination__item"><a href="catalog.html" class="pagination__link">2</a>
+          </li>
+          <li class="pagination__item"><a href="catalog.html" class="pagination__link">3</a>
+          </li>
+          <li class="pagination__item"><a href="catalog.html" class="pagination__link">4</a>
+          </li>
+          <li class="pagination__item"><a href="catalog.html" class="pagination__link">5</a>
+          </li>
+          <li class="pagination__item"><a href="catalog.html" class="pagination__link">6</a>
+          </li>
+          <li class="pagination__item"><a href="catalog.html" class="pagination__link">7</a>
+          </li>
+          <li class="pagination__item"><a href="catalog.html" class="pagination__link">8</a>
+          </li>
+          <li class="pagination__item"><a href="catalog.html" class="pagination__link">9</a>
+          </li>
+          <li class="pagination__item">
+            <a href="catalog.html" class="pagination__arrow pagination__arrow--right"></a>
+          </li>
+        </ul>
+      </div>
+      <!-- END $pagination-->
+    </main>
+    <!-- END $main-->
+    <!-- BEGIN $footer-->
+    <footer class="footer cf">
+      <ul class="footer__links">
+        <li class="footer__links-item"><a href="catalog.html" class="footer__links-link">Реклама на сайте</a>
+        </li>
+        <li class="footer__links-item"><a href="catalog.html" class="footer__links-link">Правила сайта</a>
+        </li>
+        <li class="footer__links-item"><a href="catalog.html" class="footer__links-link">Соглашения</a>
+        </li>
+        <li class="footer__links-item"><a href="catalog.html" class="footer__links-link">Контакты</a>
+        </li>
+      </ul>
+      <ul class="footer__links">
+        <li class="footer__links-item"><a href="catalog.html" class="footer__links-link">Проекты</a>
+        </li>
+        <li class="footer__links-item"><a href="catalog.html" class="footer__links-link">Каталог пользователей</a>
+        </li>
+        <li class="footer__links-item"><a href="catalog.html" class="footer__links-link">Магазин</a>
+        </li>
+        <li class="footer__links-item"><a href="catalog.html" class="footer__links-link">Блоги</a>
+        </li>
+      </ul>
+      <div class="footer__info">Зарегистрировано:<b class="footer__info-b">1432545</b>
+        <br>Сейчас на сайте:<b class="footer__info-b">4545</b>
+        <br>Проектов:<b class="footer__info-b">432545</b>
+        <br>Выполненных проектов:<b class="footer__info-b">4535</b>
+      </div>
+    </footer>
+    <!-- END $footer-->
+  </div>
+  <!--script(src='bower_components/angular/angular.js')-->
+  <!--script(src='bower_components/angular-animate/angular-animate.js')-->
+  <!--script(src='bower_components/angular-strap/dist/angular-strap.min.js')-->
+  <!--script(src='bower_components/angular-strap/dist/angular-strap.tpl.min.js')-->
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+/*------------------------------------*\
+  BEGIN $reply-p
+\*------------------------------------*/
+.reply-p {
+  padding: 32px 40px 10px 20px;
+  width:   perc(800, 1040);
+}
+
+.reply-p__title {
+  @extend %font--alpha;
+  margin:         0;
+  padding-bottom: 22px;
+  padding-left:   20px;
+  color:          #000;
+  font-size:      2.4rem;
+  line-height:    2.8rem;
+}
+
+.reply-p__title-counter {
+  display:      inline-block;
+  padding-left: 6px;
+  color:        #686868;
+}
+
+.reply-p__item {
+  padding-top:    20px;
+  padding-bottom: 25px;
+  border-bottom:  3px solid #d3d3d3;
+}
+
+.reply-p__text {
+  clear:        both;
+  overflow:     hidden;
+  padding-top:  14px;
+  padding-left: 20px;
+  color:        #535353;
+  font-size:    1.6rem;
+  line-height:  1.9rem;
+}
+
+.reply-p__in {
+  position:     relative;
+  z-index:      2;
+  margin-left:  40px;
+  padding-top:  24px;
+  padding-left: 10px;
+  font-weight:  normal;
+  font-size:    1.4rem;
+  line-height:  1.7rem;
+  &:before {
+    @extend %pseudoBeforeAfter;
+    bottom:     0;
+    width:      1px;
+    background: #d3d3d3;
+  }
+}
+
+.reply-p__in-name {
+  padding-bottom: 5px;
+  color:          #000;
+  font-weight:    bold;
+}
+
+.reply-p__in-text {
+  padding-bottom: 11px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.reply-p__answer {
+  @extend .cf;
+  padding-left: 40px;
+  .btn-q {
+    float:          right;
+    margin-right:   0;
+    margin-left:    20px;
+    padding-top:    4px;
+    padding-bottom: 4px;
+    height:         32px;
+  }
+}
+
+.reply-p__tarea {
+  padding-top: 22px;
+  .form-control {
+    @extend %font--alpha;
+    padding-top:    9px;
+    padding-bottom: 9px;
+    min-height:     92px;
+    color:          #7e7e7e;
+    font-size:      1.4rem;
+    line-height:    1.8rem;
+    resize:         vertical;
+  }
+}
+
+.reply-p__tarea-counter {
+  float:       right;
+  color:       #7e7e7e;
+  font-size:   1.4rem;
+  line-height: 3.4rem;
+}
+
+/* END $reply-p */

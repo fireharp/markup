@@ -1,0 +1,53 @@
+/*------------------------------------*\
+  BEGIN $r-price
+\*------------------------------------*/
+.r-price {
+  float:       right;
+  padding-top: 6px;
+  color:       #353535;
+}
+
+.r-price__price {
+  font-weight: bold;
+  font-size:   1.8rem;
+  line-height: 1.8rem;
+  &-value {
+    display: inline-block;
+    padding: 0 4px;
+    color:   #000;
+  }
+  &-currency {
+    color: #000;
+  }
+}
+
+.r-price__time {
+  padding-bottom: 7px;
+  font-size:      1.4rem;
+  line-height:    1.4rem;
+}
+
+.r-price__select, .r-price__offer, .r-price__disable {
+  @extend %tdn;
+  @extend %font--delta;
+  display:          block;
+  margin-bottom:    5px;
+  padding:          0 10px;
+  height:           16px;
+  border-radius:    8px;
+  background-color: #57b100;
+  color:            #fff !important;
+  text-transform:   uppercase;
+  font-size:        .9rem;
+  line-height:      1.6rem;
+}
+
+.r-price__offer {
+  background-color: #e2b047;
+}
+
+.r-price__disable {
+  background-color: #d80c0c;
+}
+
+/* END $r-price */

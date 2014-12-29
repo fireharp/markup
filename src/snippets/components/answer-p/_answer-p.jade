@@ -1,0 +1,21 @@
+// BEGIN $answer-p
+form#answer-p.answer-p(action=link, method='post', name='answer-p.answer-p')
+  fieldset.answer-p__in.cf
+    legend.answer-p__title Ответить на заказ:
+    .form-group.answer-p__tarea
+      textarea#answer-p__tarea.form-control(name='answer-p__tarea') Текст ответа
+    .form-group
+      input#answer-p__time.form-control.input-md(name='answer-p__time', type='text', placeholder='Срок в днях', required='')
+    .answer-p__faq
+      i.ico.ico__question
+    .form-group
+      input#asnwer-p__price.form-control.input-md(name='asnwer-p__price', type='text', placeholder='1000')
+    .answer-p__result - 10% = 900 руб.
+    .answer-p__faq.opened
+      i.ico.ico__question
+    .form-group.answer-p__submit-wrap
+      button#answer-p__submit.btn.btn-success(type='submit', name='answer-p__submit') Отправить
+    .answer-p__alert
+      | Срок выполнения работы обязателен для заполнения
+      i.ico.ico__close-3
+// END $answer-p
