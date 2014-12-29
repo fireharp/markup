@@ -247,54 +247,24 @@
             <div id="range-s__slider" min="0" max="100000" class="range-s__slider">slider</div>
           </div>
           <!-- END $range-s-->
-          <div class="filter__row">
-            <div class="filter__col filter__col--1"><span class="filter__text">Дата&nbsp;<span class="filter__text-mq">публикации&nbsp;</span>от:</span>
-              <div class="form-group">
-                <label for="min-date" class="control-label ico__calendar"></label>
-                <input id="min-date" type="text" size="10" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker="" class="form-control">
-              </div><span class="filter__text">до:</span>
-              <div class="form-group">
-                <label for="max-date" class="control-label ico__calendar"></label>
-                <input id="max-date" type="text" size="10" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker="" class="form-control">
-              </div>
-            </div>
-            <div class="filter__col filter__col--2">
-              <label for="min-days" class="control-label">Срок сдачи&nbsp;<span class="filter__text-mq">(в днях)&nbsp;</span>от:</label>
-              <input id="min-days" type="text" placeholder="1" name="min-days" class="form-control">
-              <label for="max-days" class="control-label">до:</label>
-              <input id="min-days" type="text" placeholder="365" name="max-days" class="form-control">
-            </div>
-            <div class="filter__col filter__col--3">
-              <select id="type-job" name="type-job" class="form-control">
-                <option value="Тип работы">Тип работы</option>
-                <option value="По найму">По найму</option>
-                <option value="Удалённо">Удалённо</option>
-              </select>
-            </div>
-          </div>
           <ul class="filter__fw-list">
             <li class="filter__fw-list-item">
-              <input id="only-myspec" type="checkbox" name="only-myspec" class="form-control">
-              <label for="only-myspec" class="control-label"><span class="filter__fw-list-mq">Только</span>мои специализации</label>
-            </li>&nbsp;
-            <li class="filter__fw-list-item">
-              <input id="only-hot" type="checkbox" name="only-hot" class="form-control">
-              <label for="only-hot" class="control-label"><span class="filter__fw-list-mq">Только</span>срочные заказы</label>
-            </li>&nbsp;
-            <li class="filter__fw-list-item">
               <input id="only-pro" type="checkbox" name="only-pro" class="form-control">
-              <label for="only-pro" class="control-label"><span class="filter__fw-list-mq">Только для</span><span title="Только для PRO" class="filter__ico-pro"></span>
+              <label for="only-pro" class="control-label"><span class="filter__fw-list-mq">Только</span><span title="Только для PRO" class="filter__ico-pro"></span>
               </label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="only-with-job" type="checkbox" name="only-with-job" class="form-control">
+              <label for="only-with-job" class="control-label">C выполненными работами</label>
+            </li>&nbsp;
+            <li class="filter__fw-list-item">
+              <input id="only-good" type="checkbox" name="only-good" class="form-control">
+              <label for="only-good" class="control-label">C положительными отзывами</label>
             </li>&nbsp;
             <li class="filter__fw-list-item">
               <input id="only-verifed" type="checkbox" name="only-verifed" class="form-control">
               <label for="only-verifed" class="control-label"><span class="filter__fw-list-mq">Только для верифицированных</span><span title="Только для верифицированных" class="filter__ico-verifed"></span>
               </label>
-            </li>&nbsp;
-            <li class="filter__fw-list-item">
-              <input id="verifed" type="checkbox" name="verifed" class="form-control">
-              <label for="verifed" class="control-label">
-                < 2 ответов в заказе</label>
             </li>
           </ul>
           <div class="filter__row filter__row--specialization">
@@ -312,7 +282,7 @@
             </div>
             <div class="btn specialization-tag">Минералогия<i class="ico ico__close"></i>
             </div>
-            <button id="filter__submit" type="button" class="btn btn-success filter__submit">Найти заказы</button>
+            <button id="filter__submit" type="button" class="btn btn-success filter__submit">Найдено (755)</button>
           </div>
         </form>
       </div>

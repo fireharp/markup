@@ -16,58 +16,80 @@
   form#filter.filter__form.cf(action=link, method='post', name='filter')
     span.filter__form-arrow
     include range-s/_range-s
-    .filter__row
-      .filter__col.filter__col--1
-        span.filter__text Дата&nbsp;
-         span.filter__text-mq публикации&nbsp;
-         | от:
-        .form-group
-          label.control-label.ico__calendar(for='min-date')
-          input#min-date.form-control(type='text', size='10', ng-model='sharedDate', data-autoclose='1', placeholder='Date', bs-datepicker='')
-        span.filter__text до:
-        .form-group
-          label.control-label.ico__calendar(for='max-date')
-          input#max-date.form-control(type='text', size='10', ng-model='sharedDate', data-autoclose='1', placeholder='Date', bs-datepicker='')
-      .filter__col.filter__col--2
-        label.control-label(for='min-days') Срок сдачи&nbsp;
-          span.filter__text-mq (в днях)&nbsp;
-          | от:
-        input#min-days.form-control(type='text', placeholder='1', name='min-days')
-        label.control-label(for='max-days') до:
-        input#min-days.form-control(type='text', placeholder='365', name='max-days')
-      .filter__col.filter__col--3
-        select#type-job.form-control(name='type-job')
-          option(value='Тип работы') Тип работы
-          option(value='По найму') По найму
-          option(value='Удалённо') Удалённо
-    ul.filter__fw-list
-      li.filter__fw-list-item
-        input#only-myspec.form-control(type='checkbox', name='only-myspec')
-        label.control-label(for='only-myspec')
-          span.filter__fw-list-mq Только
-          | мои специализации
-      | &nbsp;
-      li.filter__fw-list-item
-        input#only-hot.form-control(type='checkbox', name='only-hot')
-        label.control-label(for='only-hot')
-          span.filter__fw-list-mq Только
-          | срочные заказы
-      | &nbsp;
-      li.filter__fw-list-item
-        input#only-pro.form-control(type='checkbox', name='only-pro')
-        label.control-label(for='only-pro')
-          span.filter__fw-list-mq Только для
-          span.filter__ico-pro(title='Только для PRO')
-      | &nbsp;
-      li.filter__fw-list-item
-        input#only-verifed.form-control(type='checkbox', name='only-verifed')
-        label.control-label(for='only-verifed')
-          span.filter__fw-list-mq Только для верифицированных
-          span.filter__ico-verifed(title='Только для верифицированных')
-      | &nbsp;
-      li.filter__fw-list-item
-        input#verifed.form-control(type='checkbox', name='verifed')
-        label.control-label(for='verifed') < 2 ответов в заказе
+    if !pagename == 'catalog'
+      .filter__row
+        .filter__col.filter__col--1
+          span.filter__text Дата&nbsp;
+            span.filter__text-mq публикации&nbsp;
+            | от:
+          .form-group
+            label.control-label.ico__calendar(for='min-date')
+            input#min-date.form-control(type='text', size='10', ng-model='sharedDate', data-autoclose='1', placeholder='Date', bs-datepicker='')
+          span.filter__text до:
+          .form-group
+            label.control-label.ico__calendar(for='max-date')
+            input#max-date.form-control(type='text', size='10', ng-model='sharedDate', data-autoclose='1', placeholder='Date', bs-datepicker='')
+        .filter__col.filter__col--2
+          label.control-label(for='min-days') Срок сдачи&nbsp;
+            span.filter__text-mq (в днях)&nbsp;
+            | от:
+          input#min-days.form-control(type='text', placeholder='1', name='min-days')
+          label.control-label(for='max-days') до:
+          input#min-days.form-control(type='text', placeholder='365', name='max-days')
+        .filter__col.filter__col--3
+          select#type-job.form-control(name='type-job')
+            option(value='Тип работы') Тип работы
+            option(value='По найму') По найму
+            option(value='Удалённо') Удалённо
+      ul.filter__fw-list
+        li.filter__fw-list-item
+          input#only-myspec.form-control(type='checkbox', name='only-myspec')
+          label.control-label(for='only-myspec')
+            span.filter__fw-list-mq Только
+            | мои специализации
+        | &nbsp;
+        li.filter__fw-list-item
+          input#only-hot.form-control(type='checkbox', name='only-hot')
+          label.control-label(for='only-hot')
+            span.filter__fw-list-mq Только
+            | срочные заказы
+        | &nbsp;
+        li.filter__fw-list-item
+          input#only-pro.form-control(type='checkbox', name='only-pro')
+          label.control-label(for='only-pro')
+            span.filter__fw-list-mq Только для
+            span.filter__ico-pro(title='Только для PRO')
+        | &nbsp;
+        li.filter__fw-list-item
+          input#only-verifed.form-control(type='checkbox', name='only-verifed')
+          label.control-label(for='only-verifed')
+            span.filter__fw-list-mq Только для верифицированных
+            span.filter__ico-verifed(title='Только для верифицированных')
+        | &nbsp;
+        li.filter__fw-list-item
+          input#verifed.form-control(type='checkbox', name='verifed')
+          label.control-label(for='verifed') < 2 ответов в заказе
+    else
+      ul.filter__fw-list
+        li.filter__fw-list-item
+          input#only-pro.form-control(type='checkbox', name='only-pro')
+          label.control-label(for='only-pro')
+            span.filter__fw-list-mq Только
+            span.filter__ico-pro(title='Только для PRO')
+        | &nbsp;
+        li.filter__fw-list-item
+          input#only-with-job.form-control(type='checkbox', name='only-with-job')
+          label.control-label(for='only-with-job') C выполненными работами
+        | &nbsp;
+        li.filter__fw-list-item
+          input#only-good.form-control(type='checkbox', name='only-good')
+          label.control-label(for='only-good') C положительными отзывами
+        | &nbsp;
+        li.filter__fw-list-item
+          input#only-verifed.form-control(type='checkbox', name='only-verifed')
+          label.control-label(for='only-verifed')
+            span.filter__fw-list-mq Только для верифицированных
+            span.filter__ico-verifed(title='Только для верифицированных')
     .filter__row.filter__row--specialization
       select#specialization.form-control(name='specialization')
         option(value='Выберите специализацию') Выберите специализацию
@@ -82,5 +104,8 @@
         i.ico.ico__close
       .btn.specialization-tag Минералогия
         i.ico.ico__close
-      button.btn.btn-success.filter__submit#filter__submit(type='button') Найти заказы
+      if !pagename == 'catalog'
+        button.btn.btn-success.filter__submit#filter__submit(type='button') Найти заказы
+      else
+        button.btn.btn-success.filter__submit#filter__submit(type='button') Найдено (755)
 // END $filter

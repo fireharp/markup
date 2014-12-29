@@ -2757,8 +2757,9 @@ a:hover {
 /* line 84, ../../src/snippets/components/reply-p/_reply-p.scss */
 .reply-p__tarea {
   padding-top: 22px;
+  text-align: left;
 }
-/* line 86, ../../src/snippets/components/reply-p/_reply-p.scss */
+/* line 87, ../../src/snippets/components/reply-p/_reply-p.scss */
 .reply-p__tarea .form-control {
   padding-top: 9px;
   padding-bottom: 9px;
@@ -2769,7 +2770,7 @@ a:hover {
   resize: vertical;
 }
 
-/* line 98, ../../src/snippets/components/reply-p/_reply-p.scss */
+/* line 99, ../../src/snippets/components/reply-p/_reply-p.scss */
 .reply-p__tarea-counter {
   float: right;
   color: #7e7e7e;
