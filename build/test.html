@@ -6,15 +6,22 @@
   <title>test</title>
   <link rel="stylesheet" href="styles/bootstrap.css">
 </head>
-
-<body>
-  <input type="text" class="form-control" ng-model="selectedDate" name="date" bs-datepicker>
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        {{myVar}}
+        <input type="text" class="form-control" ng-model="myVar" >
+        <input type="text" class="form-control" ng-model="selectedDate" name="date" bs-datepicker>
+    </div>
+</body>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
   <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
   <script>
+    var myApp = angular.module('myApp',['mgcrea.ngStrap']);
+    myApp.controller('myController', ['$scope', function($scope) {
+      $scope.myVar = 'testVal';
+    }]);
   </script>
-</body>
 
 </html>
